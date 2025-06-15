@@ -1,23 +1,22 @@
-import styled from "styled-components";
 import { format, isToday } from "date-fns";
+import styled from "styled-components";
 
-import Tag from "../../ui/Tag";
 import Table from "../../ui/Table";
+import Tag from "../../ui/Tag";
 
-import { formatCurrency } from "../../utils/helpers";
-import { formatDistanceFromNow } from "../../utils/helpers";
-import Menus from "../../ui/Menus";
 import { HiEye } from "react-icons/hi";
-import { useNavigate } from "react-router-dom";
 import {
   HiArrowDownOnSquareStack,
   HiArrowUpOnSquare,
   HiTrash,
 } from "react-icons/hi2";
+import { useNavigate } from "react-router-dom";
+import ConfirmDelete from "../../ui/ConfirmDelete";
+import Menus from "../../ui/Menus";
+import Modal from "../../ui/Modal";
+import { formatCurrency, formatDistanceFromNow } from "../../utils/helpers";
 import { useCheckout } from "../check-in-out/useCheckout";
 import { useDeleteBooking } from "./useDeleteBooking";
-import Modal from "../../ui/Modal";
-import ConfirmDelete from "../../ui/ConfirmDelete";
 
 const Cabin = styled.div`
   font-size: 1.6rem;

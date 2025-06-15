@@ -4,7 +4,6 @@ export async function getCabins() {
   const { data, error } = await supabase.from("cabins").select("*");
 
   if (error) {
-    console.log(error);
     throw new Error("cabins coud't load");
   }
 
@@ -12,7 +11,6 @@ export async function getCabins() {
 }
 
 export async function addEditCabin(cabinInfo, id) {
-  // console.log(cabinInfo, id);
   const hasImagePath = cabinInfo.image?.startsWith?.(supabaseUrl);
 
   const imageName = `${`${Math.random()}`.slice(-5)}-${
@@ -23,23 +21,16 @@ export async function addEditCabin(cabinInfo, id) {
     ? cabinInfo.image
     : `${supabaseUrl}/storage/v1/object/public/cabin-images/${imageName}`;
 
-  // 1 create edit cabin
   let query = supabase.from("cabins");
 
-  // create cabin
   if (!id) {
     query = query
-      .insert(
-        [
-          {
-            ...cabinInfo,
-            image: imagePath,
-          },
-        ]
-        // {
-        //   upsert: true,
-        // }
-      )
+      .insert([
+        {
+          ...cabinInfo,
+          image: imagePath,
+        },
+      ])
       .select()
       .single();
   }

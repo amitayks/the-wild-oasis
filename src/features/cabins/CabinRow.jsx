@@ -118,18 +118,4 @@ function CabinRow({ cabin }) {
   );
 }
 
-// <Modal>
-// <Modal.Open opens='delete-cabin'>
-//   <HiTrash />
-// </Modal.Open>
-
-// <Modal.Window name='delete-cabin'>
-//   <ConfirmDelete
-//     resourceName={`'Cabin ${name}'`}
-//     onConfirm={() => deleteCabin(cabinId)}
-//     disabled={isWorking}
-//   />
-// </Modal.Window>
-// </Modal>
-
 export default CabinRow;

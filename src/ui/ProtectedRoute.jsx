@@ -16,15 +16,12 @@ const FullPage = styled`
 
 function ProtectedRout({ children }) {
   const navigate = useNavigate();
-  //1:
   const { isLoading, isAuthenticated } = useUser();
 
-  //2:
   useEffect(() => {
     if (!isAuthenticated && !isLoading) navigate("/login");
   }, [isAuthenticated, isLoading, navigate]);
 
-  //3:
   if (isLoading)
     return (
       <FullPage>

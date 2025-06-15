@@ -135,7 +135,6 @@ function CreateCabinForm({ EditFileInfo, onCloseModal }) {
       </FormRow>
 
       <FormRow>
-        {/* type is an HTML attribute! */}
         <Button
           disabled={isWorking}
           variations='secondary'

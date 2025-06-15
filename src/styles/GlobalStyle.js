@@ -191,10 +191,6 @@ img {
   filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
 }
 
-/*
-FOR DARK MODE
 
-
-*/
 `;
 export default GlobalStyle;

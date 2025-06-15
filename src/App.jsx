@@ -10,7 +10,6 @@ import Spinner from "./ui/Spinner";
 import ProtectedRoute from "./ui/ProtectedRoute";
 import { DarkModeProvider } from "./context/DarkModeContext";
 
-// Lazy load components
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Bookings = lazy(() => import("./pages/Bookings"));
 const Cabins = lazy(() => import("./pages/Cabins"));
@@ -25,7 +24,6 @@ const Checkin = lazy(() => import("./pages/Checkin"));
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      // staleTime: 60 * 1000,
       staleTime: 0,
     },
   },
