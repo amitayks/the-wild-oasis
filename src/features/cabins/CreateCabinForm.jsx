@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import FormRow from "../../ui/FormRow";
 import { useCreateCabin } from "./useCreateCabin";
 import { useEditCabin } from "./useEditCabin";
+import toast from "react-hot-toast";
 
 function CreateCabinForm({ EditFileInfo, onCloseModal }) {
   const { id: editId, ...EditFile } = EditFileInfo ? EditFileInfo : {};
@@ -18,7 +19,7 @@ function CreateCabinForm({ EditFileInfo, onCloseModal }) {
 
   const { errors } = formState;
   function onErrors(errors) {
-    console.log(errors);
+    toast.error("cannot created cabin");
   }
 
   const { isEditing, editCabin } = useEditCabin();
