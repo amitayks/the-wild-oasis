@@ -1,7 +1,7 @@
 import { StyledFlag } from "./styled";
 
-function Flag({ children, ...props }) {
-  return <StyledFlag {...props}>{children}</StyledFlag>;
+function Flag({ ...props }) {
+  return <StyledFlag {...props} />;
 }
 
 export default Flag;
