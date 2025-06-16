@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonIcon = styled.button`
+export const StyledButtonIcon = styled.button`
   background: none;
   border: none;
   padding: 0.6rem;
@@ -17,5 +17,3 @@ const ButtonIcon = styled.button`
     color: var(--color-brand-600);
   }
 `;
-
-export default ButtonIcon;
