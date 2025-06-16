@@ -1,1 +1,1 @@
-export { default } from "./toChange";
+export { default } from ".";
