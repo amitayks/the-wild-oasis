@@ -1,28 +1,20 @@
-import styled from "styled-components";
-import BookingDataBox from "../../features/bookings/BookingDataBox";
+import BookingDataBox from "../../bookings/BookingDataBox";
+import { Box } from "./styled";
 
-import Row from "../../ui/Row";
-import Heading from "../../ui/Heading";
-import ButtonGroup from "../../ui/ButtonGroup";
-import Button from "../../ui/Button";
-import ButtonText from "../../ui/ButtonText";
+import Button from "../../../ui/Button";
+import ButtonGroup from "../../../ui/ButtonGroup";
+import ButtonText from "../../../ui/ButtonText";
+import Heading from "../../../ui/Heading";
+import Row from "../../../ui/Row";
 
-import { useMoveBack } from "../../hooks/useMoveBack";
-import Spinner from "../../ui/Spinner";
-import { useBooking } from "../bookings/useBooking";
-import Checkbox from "../../ui/Checkbox";
 import { useEffect, useState } from "react";
-import { formatCurrency } from "../../utils/helpers";
-import { useCheckin } from "./useCheckin";
-import { useSettings } from "../settings/useSettings";
-
-const Box = styled.div`
-  /* Box */
-  background-color: var(--color-grey-0);
-  border: 1px solid var(--color-grey-100);
-  border-radius: var(--border-radius-md);
-  padding: 2.4rem 4rem;
-`;
+import { useMoveBack } from "../../../hooks/useMoveBack";
+import Checkbox from "../../../ui/Checkbox";
+import Spinner from "../../../ui/Spinner";
+import { formatCurrency } from "../../../utils/helpers";
+import { useBooking } from "../../bookings/useBooking";
+import { useSettings } from "../../settings/useSettings";
+import { useCheckin } from "../useCheckin";
 
 function CheckinBooking() {
   const { checkin, isCheckingin } = useCheckin();
