@@ -1,8 +1,8 @@
 import { format, isToday } from "date-fns";
 import styled from "styled-components";
 
-import Table from "../../ui/Table";
-import Tag from "../../ui/Tag";
+import Table from "../../../ui/Table";
+import Tag from "../../../ui/Tag";
 
 import { HiEye } from "react-icons/hi";
 import {
@@ -11,39 +11,13 @@ import {
   HiTrash,
 } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
-import ConfirmDelete from "../../ui/ConfirmDelete";
-import Menus from "../../ui/Menus";
-import Modal from "../../ui/Modal";
-import { formatCurrency, formatDistanceFromNow } from "../../utils/helpers";
-import { useCheckout } from "../check-in-out/useCheckout";
-import { useDeleteBooking } from "./useDeleteBooking";
-
-const Cabin = styled.div`
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--color-grey-600);
-  font-family: "Sono";
-`;
-
-const Stacked = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-
-  & span:first-child {
-    font-weight: 500;
-  }
-
-  & span:last-child {
-    color: var(--color-grey-500);
-    font-size: 1.2rem;
-  }
-`;
-
-const Amount = styled.div`
-  font-family: "Sono";
-  font-weight: 500;
-`;
+import ConfirmDelete from "../../../ui/ConfirmDelete";
+import Menus from "../../../ui/Menus";
+import Modal from "../../../ui/Modal";
+import { formatCurrency, formatDistanceFromNow } from "../../../utils/helpers";
+import { useCheckout } from "../../check-in-out/useCheckout";
+import { useDeleteBooking } from "../useDeleteBooking";
+import { Amount, Cabin, Stacked } from "./styled";
 
 function BookingRow({
   booking: {

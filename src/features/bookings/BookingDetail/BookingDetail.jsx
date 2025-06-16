@@ -1,28 +1,21 @@
-import styled from "styled-components";
-
-import { useBooking } from "./useBooking";
-import { useMoveBack } from "../../hooks/useMoveBack";
 import { useNavigate } from "react-router-dom";
-import { useCheckout } from "../check-in-out/useCheckout";
-import { useDeleteBooking } from "./useDeleteBooking";
+import { useMoveBack } from "../../../hooks/useMoveBack";
+import { useCheckout } from "../../check-in-out/useCheckout";
+import { useBooking } from "../useBooking";
+import { useDeleteBooking } from "../useDeleteBooking";
 
-import BookingDataBox from "./BookingDataBox";
-import Row from "../../ui/Row";
-import Heading from "../../ui/Heading";
-import Tag from "../../ui/Tag";
-import ButtonGroup from "../../ui/ButtonGroup";
-import Button from "../../ui/Button";
-import ButtonText from "../../ui/ButtonText";
-import ConfirmDelete from "../../ui/ConfirmDelete";
-import Modal from "../../ui/Modal";
-import Spinner from "../../ui/Spinner";
-import Empty from "../../ui/Empty";
-
-const HeadingGroup = styled.div`
-  display: flex;
-  gap: 2.4rem;
-  align-items: center;
-`;
+import Button from "../../../ui/Button";
+import ButtonGroup from "../../../ui/ButtonGroup";
+import ButtonText from "../../../ui/ButtonText";
+import ConfirmDelete from "../../../ui/ConfirmDelete";
+import Empty from "../../../ui/Empty";
+import Heading from "../../../ui/Heading";
+import Modal from "../../../ui/Modal";
+import Row from "../../../ui/Row";
+import Spinner from "../../../ui/Spinner";
+import Tag from "../../../ui/Tag";
+import BookingDataBox from "../BookingDataBox";
+import { HeadingGroup } from "./styled";
 
 function BookingDetail() {
   const navigate = useNavigate();
