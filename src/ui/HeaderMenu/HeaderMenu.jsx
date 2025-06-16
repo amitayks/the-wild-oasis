@@ -1,15 +1,10 @@
-import { useNavigate } from "react-router-dom";
 import { MdOutlineAccountCircle } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
-import ButtonIcon from "./ButtonIcon";
-import Logout from "../features/authentication/Logout";
-import styled from "styled-components";
-import DarkModeTuggle from "./DarkModeTuggle";
-
-const StyledHeaderMenu = styled.ul`
-  display: flex;
-  gap: 2.4rem;
-`;
+import Logout from "../../features/authentication/Logout";
+import ButtonIcon from "../ButtonIcon";
+import DarkModeTuggle from "../DarkModeTuggle";
+import { StyledHeaderMenu } from "./styled";
 
 function HeaderMenu() {
   const navigate = useNavigate();
