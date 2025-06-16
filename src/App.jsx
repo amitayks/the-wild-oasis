@@ -1,14 +1,15 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Suspense, lazy } from "react";
 import { Toaster } from "react-hot-toast";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
+import { DarkModeProvider } from "./context/DarkModeContext";
 import GlobalStyle from "./styles/GlobalStyle";
 import AppLayout from "./ui/AppLayout";
-import Spinner from "./ui/Spinner";
 import ProtectedRoute from "./ui/ProtectedRoute";
-import { DarkModeProvider } from "./context/DarkModeContext";
+import Spinner from "./ui/Spinner";
+// import AppLayout from "./ui/AppLayout";
 
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Bookings = lazy(() => import("./pages/Bookings"));
