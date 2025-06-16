@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const Row = styled.div`
+export const StyledRow = styled.div`
   display: flex;
 
   ${(props) =>

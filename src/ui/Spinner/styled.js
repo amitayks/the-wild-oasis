@@ -6,7 +6,7 @@ export const rotate = keyframes`
   }
 `;
 
-export const Spinner = styled.div`
+export const StyledSpinner = styled.div`
   margin: 4.8rem auto;
 
   width: 6.4rem;

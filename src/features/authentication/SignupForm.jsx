@@ -28,6 +28,7 @@ function SignupForm() {
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <FormRow label='Full name' error={errors.fullName?.message}>
+        <p>Full name</p>
         <Input
           type='text'
           id='fullName'
@@ -43,6 +44,7 @@ function SignupForm() {
       </FormRow>
 
       <FormRow label='Email address' error={errors.email?.message}>
+        <p>Email</p>
         <Input
           type='email'
           id='email'
@@ -61,6 +63,8 @@ function SignupForm() {
         label='Password (min 8 characters)'
         error={errors.password?.message}
       >
+        <p>Password</p>
+
         <Input
           type='password'
           id='password'
@@ -76,6 +80,8 @@ function SignupForm() {
       </FormRow>
 
       <FormRow label='Repeat password' error={errors.passwordConfirm?.message}>
+        <p>Repeat Password</p>
+
         <Input
           type='password'
           id='passwordConfirm'

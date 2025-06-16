@@ -1,10 +1,14 @@
 import { createContext, useContext } from "react";
 
-import StyledHeader, { Footer } from "./styled";
-import StyledTable from "./styled";
-import StyledRow from "./styled";
-import StyledBody from "./styled";
-import Empty from "./styled";
+import {
+  Empty,
+  Footer,
+  StyledBody,
+  StyledHeader,
+  StyledRow,
+  StyledTable,
+} from "./styled";
+// import Empty from "./styled";
 
 const TableContext = createContext();
 function Table({ columns, children }) {

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TableOperations = styled.div`
+export const StyledTableOperations = styled.div`
   display: flex;
   align-items: center;
   gap: 1.6rem;

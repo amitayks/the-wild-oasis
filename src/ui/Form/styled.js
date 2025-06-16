@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const Form = styled.form`
+export const StyledForm = styled.form`
   ${(props) =>
     props.type === "regular" &&
     css`

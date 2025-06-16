@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Tag = styled.span`
+export const StyledTag = styled.span`
   width: fit-content;
   text-transform: uppercase;
   font-size: 1.1rem;

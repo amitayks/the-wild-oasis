@@ -1,7 +1,7 @@
 import { StyledInput } from "./styled";
 
-function Input({ children, ...props }) {
-  return <StyledInput {...props}>{children}</StyledInput>;
+function Input({ ...props }) {
+  return <StyledInput {...props} />;
 }
 
 export default Input;
