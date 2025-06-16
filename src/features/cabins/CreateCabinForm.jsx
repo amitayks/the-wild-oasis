@@ -1,111 +1,119 @@
+import { useForm } from "react-hook-form";
+
 import Input from "../../ui/Input";
 import Form from "../../ui/Form";
 import Button from "../../ui/Button";
 import FileInput from "../../ui/FileInput";
 import Textarea from "../../ui/Textarea";
-import { useForm } from "react-hook-form";
 import FormRow from "../../ui/FormRow";
+
 import { useCreateCabin } from "./useCreateCabin";
 import { useEditCabin } from "./useEditCabin";
-import toast from "react-hot-toast";
 
-function CreateCabinForm({ EditFileInfo, onCloseModal }) {
-  const { id: editId, ...EditFile } = EditFileInfo ? EditFileInfo : {};
-  const isEdit = Boolean(editId);
+function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
+  const { isCreating, createCabin } = useCreateCabin();
+  const { isEditing, editCabin } = useEditCabin();
+  const isWorking = isCreating || isEditing;
+
+  const { id: editId, ...editValues } = cabinToEdit;
+  const isEditSession = Boolean(editId);
 
   const { register, handleSubmit, reset, getValues, formState } = useForm({
-    defaultValues: isEdit ? EditFile : {},
+    defaultValues: isEditSession ? editValues : {},
   });
-
   const { errors } = formState;
-  function onErrors(errors) {
-    toast.error("cannot created cabin");
-  }
-
-  const { isEditing, editCabin } = useEditCabin();
-  const { isCreating, createCabin } = useCreateCabin();
-  const isWorking = isCreating || isEditing;
 
   function onSubmit(data) {
     const image = typeof data.image === "string" ? data.image : data.image[0];
 
-    if (isEdit) {
-      editCabin([{ ...data, image }, editId], {
-        onSuccess() {
-          reset();
-          onCloseModal?.();
-        },
-      });
-    } else {
-      createCabin(
-        { ...data, image },
+    if (isEditSession)
+      editCabin(
+        { newCabinData: { ...data, image }, id: editId },
         {
-          onSuccess() {
+          onSuccess: (data) => {
             reset();
             onCloseModal?.();
           },
         }
       );
-    }
+    else
+      createCabin(
+        { ...data, image: image },
+        {
+          onSuccess: (data) => {
+            reset();
+            onCloseModal?.();
+          },
+        }
+      );
+  }
+
+  function onError(errors) {
+    // console.log(errors);
   }
 
   return (
     <Form
-      onSubmit={handleSubmit(onSubmit, onErrors)}
+      onSubmit={handleSubmit(onSubmit, onError)}
       type={onCloseModal ? "modal" : "regular"}
     >
-      <FormRow label='Cabin Name' error={errors?.name?.message}>
+      <FormRow label='Cabin name' error={errors?.name?.message}>
+        <span>Cabin Name</span>
         <Input
           type='text'
           id='name'
           disabled={isWorking}
           {...register("name", {
-            required: "Cabin name must be filled",
+            required: "This field is required",
           })}
         />
       </FormRow>
 
       <FormRow label='Maximum capacity' error={errors?.maxCapacity?.message}>
+        <span>Maximum capacity</span>
         <Input
           type='number'
           id='maxCapacity'
           disabled={isWorking}
           {...register("maxCapacity", {
-            required: "Capacity must to be filled",
+            required: "This field is required",
             min: {
               value: 1,
-              message: "Minimum capacity is 1",
+              message: "Capacity should be at least 1",
             },
           })}
         />
       </FormRow>
 
       <FormRow label='Regular price' error={errors?.regularPrice?.message}>
+        <span>Regular price</span>
         <Input
           type='number'
           id='regularPrice'
           disabled={isWorking}
           {...register("regularPrice", {
-            required: "Price must to be filled",
+            required: "This field is required",
             min: {
               value: 1,
-              message: "Minimum price is 1",
+              message: "Capacity should be at least 1",
             },
           })}
         />
       </FormRow>
 
       <FormRow label='Discount' error={errors?.discount?.message}>
+        <span>Discount</span>
+
         <Input
           type='number'
           id='discount'
           disabled={isWorking}
           defaultValue={0}
           {...register("discount", {
-            required: "Discount must to be filled",
+            required: "This field is required",
             validate: (value) =>
               value <= getValues().regularPrice ||
-              "Discount has to be less from regular price",
+              "Discount should be less than regular price",
           })}
         />
       </FormRow>
@@ -114,38 +122,40 @@ function CreateCabinForm({ EditFileInfo, onCloseModal }) {
         label='Description for website'
         error={errors?.description?.message}
       >
+        <span>Description for website</span>
         <Textarea
           type='number'
           id='description'
           defaultValue=''
+          disabled={isWorking}
           {...register("description", {
-            required: "Desciption must to be filled",
+            required: "This field is required",
           })}
         />
       </FormRow>
 
-      <FormRow label='Cabin Photo' error={errors?.image?.message}>
+      <FormRow label='Cabin photo'>
+        <span>Cabin photo</span>
         <FileInput
           id='image'
           accept='image/*'
-          disabled={isWorking}
           {...register("image", {
-            required: isEdit ? false : "Photo must be attached",
+            required: isEditSession ? false : "This field is required",
           })}
         />
       </FormRow>
 
       <FormRow>
+        {/* type is an HTML attribute! */}
         <Button
-          disabled={isWorking}
-          variations='secondary'
+          variations='secondery'
           type='reset'
           onClick={() => onCloseModal?.()}
         >
           Cancel
         </Button>
         <Button disabled={isWorking}>
-          {isEdit ? "Submit Changes" : "Create Cabin"}
+          {isEditSession ? "Edit cabin" : "Create new cabin"}
         </Button>
       </FormRow>
     </Form>
