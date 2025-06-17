@@ -1,4 +1,4 @@
-import BookingDataBox from "../../bookings/BookingDataBox";
+import { BookingDataBox } from "../../bookings/BookingDataBox";
 import { Box } from "./CheckinBooking.styled";
 
 import Button from "../../../ui/Button";

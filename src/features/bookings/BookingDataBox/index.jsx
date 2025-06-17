@@ -1,1 +1,1 @@
-export { default } from "./BookingDataBox";
+export { BookingDataBox } from "./BookingDataBox";

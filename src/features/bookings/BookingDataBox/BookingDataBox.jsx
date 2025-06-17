@@ -18,9 +18,10 @@ import {
   Section,
   StyledBookingDataBox,
 } from "./BookingDataBox.styled";
+import { memo } from "react";
 
 // A purely presentational component
-function BookingDataBox({ booking }) {
+export const BookingDataBox = memo(({ booking }) => {
   const {
     created_at,
     startDate,
@@ -100,6 +101,6 @@ function BookingDataBox({ booking }) {
       </Footer>
     </StyledBookingDataBox>
   );
-}
+});
 
-export default BookingDataBox;
+BookingDataBox.displayName = "BookingDataBox";
