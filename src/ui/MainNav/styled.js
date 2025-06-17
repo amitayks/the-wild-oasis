@@ -19,6 +19,18 @@ export const StyledNavLink = styled(NavLink)`
     font-weight: 500;
     padding: 1.2rem 2.4rem;
     transition: all 0.3s;
+    border-radius: var(--border-radius-sm);
+
+    @media (max-width: 768px) {
+      padding: 1rem 1.6rem;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      padding: 0.8rem 1.2rem;
+      font-size: 1.4rem;
+      gap: 1rem;
+    }
   }
 
   &:hover,
@@ -35,6 +47,11 @@ export const StyledNavLink = styled(NavLink)`
     height: 2.4rem;
     color: var(--color-grey-400);
     transition: all 0.3s;
+
+    @media (max-width: 480px) {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 
   &:hover svg,
@@ -42,5 +59,11 @@ export const StyledNavLink = styled(NavLink)`
   &.active:link svg,
   &.active:visited svg {
     color: var(--color-brand-600);
+  }
+
+  & span {
+    @media (max-width: 480px) {
+      font-size: 1.3rem;
+    }
   }
 `;

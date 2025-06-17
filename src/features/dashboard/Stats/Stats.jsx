@@ -1,13 +1,14 @@
+import { HiOutlineBriefcase } from "react-icons/hi";
 import {
   HiOutlineBanknotes,
   HiOutlineCalendarDateRange,
   HiOutlineChartBar,
 } from "react-icons/hi2";
-import Stat from "./Stat";
-import { HiOutlineBriefcase } from "react-icons/hi";
-import { formatCurrency } from "../../utils/helpers";
+import { formatCurrency } from "../../../utils/helpers";
+import Stat from "../Stat";
+import { StyledStatsGrid } from "./styled";
 
-function Stats({ bookings, confirmStays, numDays, cabins }) {
+export const Stats = ({ bookings, confirmStays, numDays, cabins }) => {
   const numBookings = bookings?.length;
 
   const numSales = bookings.reduce((acc, booking) => {
@@ -21,7 +22,7 @@ function Stats({ bookings, confirmStays, numDays, cabins }) {
     (numDays * cabins.length);
 
   return (
-    <>
+    <StyledStatsGrid>
       <Stat
         color='blue'
         title='Bookings'
@@ -46,8 +47,6 @@ function Stats({ bookings, confirmStays, numDays, cabins }) {
         value={Math.round(numNights * 100) + "%"}
         icon={<HiOutlineChartBar />}
       />
-    </>
+    </StyledStatsGrid>
   );
-}
-
-export default Stats;
+};

@@ -1,5 +1,4 @@
 import { format, isToday } from "date-fns";
-import styled from "styled-components";
 
 import Table from "../../../ui/Table";
 import Tag from "../../../ui/Tag";

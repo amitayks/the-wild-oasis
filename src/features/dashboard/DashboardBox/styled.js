@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DashboardBox = styled.div`
+export const StyledDashboardBox = styled.div`
   /* Box */
   background-color: var(--color-grey-0);
   border: 1px solid var(--color-grey-100);

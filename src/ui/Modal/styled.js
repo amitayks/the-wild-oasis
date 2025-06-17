@@ -10,6 +10,30 @@ export const StyledModal = styled.div`
   box-shadow: var(--shadow-lg);
   padding: 3.2rem 4rem;
   transition: all 0.5s;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  @media (max-width: 768px) {
+    padding: 2.4rem 2rem;
+    margin: 1rem;
+    max-height: 95vh;
+    width: calc(100vw - 2rem);
+    max-width: fit-content;
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem 1.6rem;
+    margin: 0.5rem;
+    width: calc(100vw - 1rem);
+    max-width: fit-content;
+
+    /* Special styling for mobile menu */
+    &:has([class*="MobileMenu"]) {
+      top: 20%;
+      transform: translate(-50%, 0);
+      border-radius: var(--border-radius-md);
+    }
+  }
 `;
 
 export const Overlay = styled.div`
@@ -43,5 +67,15 @@ export const Button = styled.button`
     width: 2.4rem;
     height: 2.4rem;
     color: var(--color-grey-500);
+
+    @media (max-width: 480px) {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    top: 1rem;
+    right: 1rem;
   }
 `;
