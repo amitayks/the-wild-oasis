@@ -1,3 +1,9 @@
+import { HiOutlineBriefcase, HiOutlineChartBar } from "react-icons/hi";
+import {
+  HiOutlineBanknotes,
+  HiOutlineCalendarDateRange,
+} from "react-icons/hi2";
+
 export const PAGE_SIZE = 5;
 
 export const CABIN_FILTER_OPTIONS = [
@@ -30,3 +36,10 @@ export const BOOKING_SORT_OPTIONS = [
   },
   { value: "totalPrice-asc", label: "Sort by amount (low first)" },
 ];
+
+export const STAT_ICONS = {
+  bookings: <HiOutlineBriefcase />,
+  sales: <HiOutlineBanknotes />,
+  checkins: <HiOutlineCalendarDateRange />,
+  occupancy: <HiOutlineChartBar />,
+};

@@ -8,7 +8,7 @@ import { useRecentBooking } from "../useRecentBooking";
 import { useRecentStays } from "../useRecentStays";
 import { StyledDashboardLayout } from "./DashboardLayout.styled";
 
-function DashboardLayout() {
+export const DashboardLayout = () => {
   const { bookings, isLoading } = useRecentBooking();
   const { isLoading: isLoadingStays, confirmStays, numDays } = useRecentStays();
 
@@ -31,6 +31,4 @@ function DashboardLayout() {
       <SalesChart bookings={bookings} numDays={numDays} />
     </StyledDashboardLayout>
   );
-}
-
-export default DashboardLayout;
+};

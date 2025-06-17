@@ -1,25 +1,31 @@
-import { HiOutlineBriefcase } from "react-icons/hi";
-import {
-  HiOutlineBanknotes,
-  HiOutlineCalendarDateRange,
-  HiOutlineChartBar,
-} from "react-icons/hi2";
+import { useMemo } from "react";
+import { STAT_ICONS } from "../../../utils/constans";
 import { formatCurrency } from "../../../utils/helpers";
-import Stat from "../Stat";
 import { StyledStatsGrid } from "./Stats.styled";
+import { Stat } from "../Stat";
 
 export const Stats = ({ bookings, confirmStays, numDays, cabins }) => {
-  const numBookings = bookings?.length;
+  // ✅ Memoize expensive calculations
+  const numBookings = useMemo(() => bookings?.length || 0, [bookings]);
 
-  const numSales = bookings.reduce((acc, booking) => {
-    return acc + booking.totalPrice + booking.extraPrice;
-  }, 0);
+  const numSales = useMemo(
+    () =>
+      bookings.reduce(
+        (acc, booking) => acc + booking.totalPrice + booking.extraPrice,
+        0
+      ),
+    [bookings]
+  );
 
-  const numNights =
-    confirmStays.reduce((acc, con) => {
-      return acc + con.numNights;
-    }, 0) /
-    (numDays * cabins.length);
+  const occupancyRate = useMemo(() => {
+    const numNights = confirmStays.reduce(
+      (acc, stay) => acc + stay.numNights,
+      0
+    );
+    return Math.round((numNights / (numDays * cabins.length)) * 100);
+  }, [confirmStays, numDays, cabins]);
+
+  const formattedSales = useMemo(() => formatCurrency(numSales), [numSales]);
 
   return (
     <StyledStatsGrid>
@@ -27,25 +33,25 @@ export const Stats = ({ bookings, confirmStays, numDays, cabins }) => {
         color='blue'
         title='Bookings'
         value={numBookings}
-        icon={<HiOutlineBriefcase />}
+        icon={STAT_ICONS.bookings}
       />
       <Stat
         color='green'
         title='Sales'
-        value={formatCurrency(numSales)}
-        icon={<HiOutlineBanknotes />}
+        value={formattedSales}
+        icon={STAT_ICONS.sales}
       />
       <Stat
         color='indigo'
         title='Check Ins'
         value={confirmStays?.length}
-        icon={<HiOutlineCalendarDateRange />}
+        icon={STAT_ICONS.checkins}
       />
       <Stat
         color='yellow'
-        title='Ocupancy Rate'
-        value={Math.round(numNights * 100) + "%"}
-        icon={<HiOutlineChartBar />}
+        title='Occupancy Rate'
+        value={`${occupancyRate}%`}
+        icon={STAT_ICONS.occupancy}
       />
     </StyledStatsGrid>
   );

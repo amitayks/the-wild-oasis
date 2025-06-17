@@ -1,1 +1,1 @@
-export { default } from "./DurationChart";
+export { DurationChart } from "./DurationChart";

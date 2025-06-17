@@ -1,1 +1,1 @@
-export { default } from "./DashboardBox";
+export { DashboardBox } from "./DashboardBox";

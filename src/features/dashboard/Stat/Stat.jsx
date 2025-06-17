@@ -1,6 +1,6 @@
 import { Icon, StyledStat, Title, Value } from "./Stat.styled";
 
-function Stat({ icon, title, value, color }) {
+export const Stat = ({ icon, title, value, color }) => {
   return (
     <StyledStat>
       <Icon color={color}>{icon}</Icon>
@@ -8,6 +8,6 @@ function Stat({ icon, title, value, color }) {
       <Value>{value}</Value>
     </StyledStat>
   );
-}
+};
 
 export default Stat;

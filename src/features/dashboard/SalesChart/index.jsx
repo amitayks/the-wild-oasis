@@ -1,1 +1,1 @@
-export { default } from "./SalesChart";
+export { SalesChart } from "./SalesChart";

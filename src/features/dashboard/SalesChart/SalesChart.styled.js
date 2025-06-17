@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import DashboardBox from "../DashboardBox";
+import { DashboardBox } from "../DashboardBox";
 
 export const StyledSalesChart = styled(DashboardBox)`
   & .recharts-cartesian-grid-horizontal line,

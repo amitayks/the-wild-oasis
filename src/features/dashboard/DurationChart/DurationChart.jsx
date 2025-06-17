@@ -1,5 +1,3 @@
-import styled from "styled-components";
-import Heading from "../../../ui/Heading";
 import {
   Cell,
   Legend,
@@ -9,7 +7,9 @@ import {
   Tooltip,
 } from "recharts";
 import { useDarkMode } from "../../../context/useDarkMode";
+import { Heading } from "../../../ui/Heading";
 import { ChartBox } from "./DurationChart.styled";
+import { memo } from "react";
 
 const startDataLight = [
   {
@@ -122,7 +122,7 @@ function prepareData(startData, stays) {
   return data;
 }
 
-function DurationChart({ confirmStays }) {
+export const DurationChart = memo(({ confirmStays }) => {
   const { isDarkMode } = useDarkMode();
 
   const startData = isDarkMode ? startDataDark : startDataLight;
@@ -164,6 +164,5 @@ function DurationChart({ confirmStays }) {
       </ResponsiveContainer>
     </ChartBox>
   );
-}
-
-export default DurationChart;
+});
+DurationChart.displayName = "DurationChart";

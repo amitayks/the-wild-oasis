@@ -9,10 +9,11 @@ import {
   YAxis,
 } from "recharts";
 import { useDarkMode } from "../../../context/useDarkMode";
-import Heading from "../../../ui/Heading";
+import { Heading } from "../../../ui/Heading";
 import { StyledSalesChart } from "./SalesChart.styled";
+import { memo } from "react";
 
-function SalesChart({ bookings, numDays }) {
+export const SalesChart = memo(({ bookings, numDays }) => {
   const { isDarkMode } = useDarkMode();
 
   const allDays = eachDayOfInterval({
@@ -86,6 +87,6 @@ function SalesChart({ bookings, numDays }) {
       </ResponsiveContainer>
     </StyledSalesChart>
   );
-}
+});
 
-export default SalesChart;
+SalesChart.displayName = "SalesChart";
