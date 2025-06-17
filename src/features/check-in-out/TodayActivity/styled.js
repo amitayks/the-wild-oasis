@@ -10,8 +10,15 @@ export const StyledToday = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  grid-column: 1 / span 2;
   padding-top: 2.4rem;
+
+  @media (max-width: 768px) {
+    padding: 2.4rem 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem 1.2rem;
+  }
 `;
 
 export const TodayList = styled.ul`
@@ -31,4 +38,12 @@ export const NoActivity = styled.p`
   font-size: 1.8rem;
   font-weight: 500;
   margin-top: 0.8rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 `;

@@ -7,7 +7,6 @@ export const ChartBox = styled.div`
   border-radius: var(--border-radius-md);
 
   padding: 2.4rem 3.2rem;
-  grid-column: 3 / span 2;
 
   & > *:first-child {
     margin-bottom: 1.6rem;
@@ -15,5 +14,13 @@ export const ChartBox = styled.div`
 
   & .recharts-pie-label-text {
     font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.6rem 1.2rem;
   }
 `;

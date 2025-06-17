@@ -11,4 +11,14 @@ export const StyledDashboardBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+
+  @media (max-width: 768px) {
+    padding: 2.4rem 1.6rem;
+    gap: 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem 1.2rem;
+    gap: 1.2rem;
+  }
 `;
