@@ -1,5 +1,5 @@
 import Button from "../../../ui/Button";
-import CreateCabinForm from "../CreateCabinForm";
+import { CreateCabinForm } from "../CreateCabinForm";
 import Modal from "../../../ui/Modal";
 
 export const AddCabin = () => {

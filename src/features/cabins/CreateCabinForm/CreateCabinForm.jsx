@@ -1,16 +1,16 @@
 import { useForm } from "react-hook-form";
 
-import Input from "../../ui/Input";
-import Form from "../../ui/Form";
-import Button from "../../ui/Button";
-import FileInput from "../../ui/FileInput";
-import Textarea from "../../ui/Textarea";
-import FormRow from "../../ui/FormRow";
+import Input from "../../../ui/Input";
+import Form from "../../../ui/Form";
+import Button from "../../../ui/Button";
+import FileInput from "../../../ui/FileInput";
+import Textarea from "../../../ui/Textarea";
+import FormRow from "../../../ui/FormRow";
 
-import { useCreateCabin } from "./useCreateCabin";
-import { useEditCabin } from "./useEditCabin";
+import { useCreateCabin } from "../useCreateCabin";
+import { useEditCabin } from "../useEditCabin";
 
-function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
+export const CreateCabinForm = ({ cabinToEdit = {}, onCloseModal }) => {
   const { isCreating, createCabin } = useCreateCabin();
   const { isEditing, editCabin } = useEditCabin();
   const isWorking = isCreating || isEditing;
@@ -147,11 +147,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
 
       <FormRow>
         {/* type is an HTML attribute! */}
-        <Button
-          variations='secondery'
-          type='reset'
-          onClick={() => onCloseModal?.()}
-        >
+        <Button type='reset' onClick={() => onCloseModal?.()}>
           Cancel
         </Button>
         <Button disabled={isWorking}>
@@ -160,6 +156,4 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
       </FormRow>
     </Form>
   );
-}
-
-export default CreateCabinForm;
+};
