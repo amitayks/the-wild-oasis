@@ -1,1 +1,1 @@
-export { default } from "./TodayActivity";
+export { TodayActivity } from "./TodayActivity";

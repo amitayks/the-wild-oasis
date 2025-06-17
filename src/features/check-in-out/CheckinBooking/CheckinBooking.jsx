@@ -16,7 +16,7 @@ import { useBooking } from "../../bookings/useBooking";
 import { useSettings } from "../../settings/useSettings";
 import { useCheckin } from "../useCheckin";
 
-function CheckinBooking() {
+export const CheckinBooking = () => {
   const { checkin, isCheckingin } = useCheckin();
   const [addBreakfast, setAddBreakfast] = useState(false);
   const [checkPayment, setCheckPayment] = useState(false);
@@ -117,6 +117,4 @@ function CheckinBooking() {
       </ButtonGroup>
     </>
   );
-}
-
-export default CheckinBooking;
+};

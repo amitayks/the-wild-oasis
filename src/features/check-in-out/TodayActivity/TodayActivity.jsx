@@ -1,13 +1,11 @@
-import styled from "styled-components";
-
 import Heading from "../../../ui/Heading";
 import Row from "../../../ui/Row";
-import { useTodayActivity } from "../useTodayActivity";
 import Spinner from "../../../ui/Spinner";
-import TodayItem from "../TodayItem";
+import { TodayItem } from "../TodayItem";
+import { useTodayActivity } from "../useTodayActivity";
 import { NoActivity, StyledToday, TodayList } from "./TodayActivity.styled";
 
-function TodayActivity() {
+export const TodayActivity = () => {
   const { stays, isLoading } = useTodayActivity();
 
   return (
@@ -31,6 +29,4 @@ function TodayActivity() {
       )}
     </StyledToday>
   );
-}
-
-export default TodayActivity;
+};

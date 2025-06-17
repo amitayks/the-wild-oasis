@@ -1,6 +1,6 @@
 import Spinner from "../../../ui/Spinner";
 import { useCabin } from "../../cabins/useCabin";
-import TodayActivity from "../../check-in-out/TodayActivity";
+import { TodayActivity } from "../../check-in-out/TodayActivity";
 import DurationChart from "../DurationChart";
 import SalesChart from "../SalesChart";
 import { Stats } from "../Stats";
