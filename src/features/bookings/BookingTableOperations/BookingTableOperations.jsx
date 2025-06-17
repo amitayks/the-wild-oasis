@@ -1,8 +1,9 @@
-import { SortBy } from "../../ui/SortBy";
-import Filter from "../../ui/Filter";
-import TableOperations from "../../ui/TableOperations";
+import { SortBy } from "../../../ui/SortBy";
+import Filter from "../../../ui/Filter";
+import TableOperations from "../../../ui/TableOperations";
+import { memo } from "react";
 
-function BookingTableOperations() {
+export const BookingTableOperations = memo(() => {
   return (
     <TableOperations>
       <Filter
@@ -28,6 +29,6 @@ function BookingTableOperations() {
       />
     </TableOperations>
   );
-}
+});
 
-export default BookingTableOperations;
+BookingTableOperations.displayName = "BookingTableOperations";

@@ -1,12 +1,12 @@
-import { BookingDetail } from "./BookingRow";
-import Table from "../../ui/Table";
-import Menus from "../../ui/Menus";
-import { useBookings } from "./useBookings";
-import Spinner from "../../ui/Spinner";
-import { Empty } from "../../ui/Empty";
-import Pagination from "../../ui/Pagination";
+import { Empty } from "../../../ui/Empty";
+import Menus from "../../../ui/Menus";
+import Pagination from "../../../ui/Pagination";
+import Spinner from "../../../ui/Spinner";
+import Table from "../../../ui/Table";
+import { BookingRow } from "../BookingRow";
+import { useBookings } from "../useBookings";
 
-function BookingTable() {
+export const BookingTable = () => {
   const { bookings, isLoading, count, page } = useBookings();
 
   if (!bookings?.length) return <Empty resourceName='bookings' />;
@@ -36,6 +36,4 @@ function BookingTable() {
       </Table>
     </Menus>
   );
-}
-
-export default BookingTable;
+};
