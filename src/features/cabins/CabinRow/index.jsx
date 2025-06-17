@@ -1,1 +1,1 @@
-export { default } from "./CabinRow";
+export { CabinRow } from "./CabinRow";

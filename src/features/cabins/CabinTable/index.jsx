@@ -1,0 +1,1 @@
+export { CabinTable } from "./CabinTable";

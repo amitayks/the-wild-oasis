@@ -1,34 +1,17 @@
-import { SortBy } from "../../../ui/SortBy";
 import Filter from "../../../ui/Filter";
+import { SortBy } from "../../../ui/SortBy";
 import TableOperations from "../../../ui/TableOperations";
-import { memo } from "react";
+import {
+  BOOKING_FILTER_OPTIONS,
+  BOOKING_SORT_OPTIONS,
+} from "../../../utils/constans";
 
-export const BookingTableOperations = memo(() => {
+export const BookingTableOperations = () => {
   return (
     <TableOperations>
-      <Filter
-        filterName='status'
-        options={[
-          { value: "all", label: "All" },
-          { value: "checked-out", label: "Checked out" },
-          { value: "checked-in", label: "Checked in" },
-          { value: "unconfirmed", label: "Unconfirmed" },
-        ]}
-      />
+      <Filter filterName='status' options={BOOKING_FILTER_OPTIONS} />
 
-      <SortBy
-        options={[
-          { value: "startDate-desc", label: "Sort by date (recent first)" },
-          { value: "startDate-asc", label: "Sort by date (earlier first)" },
-          {
-            value: "totalPrice-desc",
-            label: "Sort by amount (high first)",
-          },
-          { value: "totalPrice-asc", label: "Sort by amount (low first)" },
-        ]}
-      />
+      <SortBy options={BOOKING_SORT_OPTIONS} />
     </TableOperations>
   );
-});
-
-BookingTableOperations.displayName = "BookingTableOperations";
+};

@@ -1,0 +1,1 @@
+export { CabinTableOperation } from "./CabinTableOperation";
