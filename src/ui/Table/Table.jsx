@@ -7,8 +7,8 @@ import {
   StyledHeader,
   StyledRow,
   StyledTable,
-} from "./styled";
-// import Empty from "./styled";
+} from "./Table.styled";
+// import {Empty} from "./Table.styled";
 
 const TableContext = createContext();
 function Table({ columns, children }) {

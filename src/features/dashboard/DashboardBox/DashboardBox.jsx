@@ -1,4 +1,4 @@
-import { StyledDashboardBox } from "./styled";
+import { StyledDashboardBox } from "./DashboardBox.styled";
 
 function DashboardBox({ children, ...props }) {
   return <StyledDashboardBox {...props}>{children}</StyledDashboardBox>;

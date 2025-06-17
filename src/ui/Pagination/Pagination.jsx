@@ -2,7 +2,7 @@ import { HiChevronRight } from "react-icons/hi";
 import { HiChevronLeft } from "react-icons/hi2";
 import { useSearchParams } from "react-router-dom";
 import { PAGE_SIZE } from "../../utils/constans";
-import { Buttons, P, PaginationButton, StyledPagination } from "./styled";
+import { Buttons, P, PaginationButton, StyledPagination } from "./Pagination.styled";
 
 function Pagination({ count, currentPage }) {
   const [searchParams, setSearchParams] = useSearchParams();

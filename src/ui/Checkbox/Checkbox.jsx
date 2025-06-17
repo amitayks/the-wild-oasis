@@ -1,4 +1,4 @@
-import { StyledCheckbox } from "./styled";
+import { StyledCheckbox } from "./Checkbox.styled";
 
 function Checkbox({ checked, onChange, disabled = false, id, children }) {
   return (

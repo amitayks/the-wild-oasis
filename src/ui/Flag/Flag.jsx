@@ -1,4 +1,4 @@
-import { StyledFlag } from "./styled";
+import { StyledFlag } from "./Flag.styled";
 
 function Flag({ ...props }) {
   return <StyledFlag {...props} />;

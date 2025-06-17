@@ -10,7 +10,7 @@ import {
 } from "recharts";
 import { useDarkMode } from "../../../context/useDarkMode";
 import Heading from "../../../ui/Heading";
-import { StyledSalesChart } from "./Styled";
+import { StyledSalesChart } from "./SalesChart.styled";
 
 function SalesChart({ bookings, numDays }) {
   const { isDarkMode } = useDarkMode();

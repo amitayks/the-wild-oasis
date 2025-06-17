@@ -1,4 +1,4 @@
-import { StyledFileInput } from "./styled";
+import { StyledFileInput } from "./FileInput.styled";
 
 function FileInput({ children, ...props }) {
   return <StyledFileInput {...props}>{children}</StyledFileInput>;

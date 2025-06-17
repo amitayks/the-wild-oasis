@@ -4,7 +4,7 @@ import ButtonIcon from "../ButtonIcon";
 import HeaderMenu from "../HeaderMenu";
 import MobileMenu from "../MobileMenu";
 import Modal from "../Modal";
-import { StyledHeader } from "./styled";
+import { StyledHeader } from "./Header.styled";
 
 function Header() {
   return (

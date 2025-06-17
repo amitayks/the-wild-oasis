@@ -1,5 +1,5 @@
 import { useUser } from "../useUser";
-import { Avatar, StyledUserAvatar } from "./styled";
+import { Avatar, StyledUserAvatar } from "./UserAvatar.styled";
 
 function UserAvatar() {
   const { user } = useUser();

@@ -1,4 +1,4 @@
-import { StyledRow } from "./styled";
+import { StyledRow } from "./Row.styled";
 
 function Row({ children, ...props }) {
   return <StyledRow {...props}>{children}</StyledRow>;

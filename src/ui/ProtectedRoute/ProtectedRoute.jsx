@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useUser } from "../../features/authentication/useUser";
 
 import Spinner from "../Spinner";
-import { FullPage } from "./styled";
+import { FullPage } from "./ProtectedRoute.styled";
 
 function ProtectedRout({ children }) {
   const navigate = useNavigate();

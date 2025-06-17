@@ -1,4 +1,4 @@
-import { StyledForm } from "./styled";
+import { StyledForm } from "./Form.styled";
 
 function Form({ children, ...props }) {
   return <StyledForm {...props}>{children}</StyledForm>;

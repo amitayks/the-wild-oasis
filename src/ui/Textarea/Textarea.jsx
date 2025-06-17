@@ -1,4 +1,4 @@
-import { StyledTextarea } from "./styled";
+import { StyledTextarea } from "./Textarea.styled";
 
 function Textarea({ ...props }) {
   return <StyledTextarea {...props} />;

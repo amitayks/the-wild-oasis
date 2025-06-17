@@ -1,5 +1,5 @@
 import { useDarkMode } from "../../context/useDarkMode";
-import { Img, StyledLogo } from "./styled";
+import { Img, StyledLogo } from "./Logo.styled";
 
 function Logo() {
   const { isDarkMode } = useDarkMode();

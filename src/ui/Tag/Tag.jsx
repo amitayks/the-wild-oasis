@@ -1,4 +1,4 @@
-import { StyledTag } from "./styled";
+import { StyledTag } from "./Tag.styled";
 
 function Tag({ children, ...props }) {
   return <StyledTag {...props}>{children}</StyledTag>;

@@ -1,5 +1,5 @@
 import { Label } from "recharts";
-import { Error, StyledFormRow } from "./styled";
+import { Error, StyledFormRow } from "./FormRowVertical.styled";
 
 function FormRowVertical({ label, error, children }) {
   return (

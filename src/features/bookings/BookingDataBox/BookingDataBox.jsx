@@ -17,7 +17,7 @@ import {
   Price,
   Section,
   StyledBookingDataBox,
-} from "./styled";
+} from "./BookingDataBox.styled";
 
 // A purely presentational component
 function BookingDataBox({ booking }) {

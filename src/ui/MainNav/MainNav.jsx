@@ -5,7 +5,7 @@ import {
   HiOutlineHomeModern,
   HiOutlineUsers,
 } from "react-icons/hi2";
-import { NavList, StyledNavLink } from "./styled";
+import { NavList, StyledNavLink } from "./MainNav.styled";
 
 function MainNav({ onCloseModal }) {
   const handleLinkClick = () => {

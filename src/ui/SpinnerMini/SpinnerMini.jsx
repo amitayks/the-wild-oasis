@@ -1,4 +1,4 @@
-import { StyledSpinnerMini } from "./styled";
+import { StyledSpinnerMini } from "./SpinnerMini.styled";
 
 function SpinnerMini({ ...props }) {
   return <StyledSpinnerMini {...props} />;

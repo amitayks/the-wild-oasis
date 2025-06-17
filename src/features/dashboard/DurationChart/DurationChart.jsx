@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from "recharts";
 import { useDarkMode } from "../../../context/useDarkMode";
-import { ChartBox } from "./styled";
+import { ChartBox } from "./DurationChart.styled";
 
 const startDataLight = [
   {

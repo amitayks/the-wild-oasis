@@ -6,7 +6,7 @@ import {
 } from "react-icons/hi2";
 import { formatCurrency } from "../../../utils/helpers";
 import Stat from "../Stat";
-import { StyledStatsGrid } from "./styled";
+import { StyledStatsGrid } from "./Stats.styled";
 
 export const Stats = ({ bookings, confirmStays, numDays, cabins }) => {
   const numBookings = bookings?.length;

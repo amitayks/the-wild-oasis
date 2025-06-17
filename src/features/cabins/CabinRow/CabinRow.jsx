@@ -8,7 +8,7 @@ import CreateCabinForm from "../CreateCabinForm";
 import { useCreateCabin } from "../useCreateCabin";
 import { useDeleteCabin } from "../useDeleteCabin";
 
-import { Cabin, Discount, Img, Price } from "./styled";
+import { Cabin, Discount, Img, Price } from "./CabinRow.styled";
 
 function CabinRow({ cabin }) {
   const { isDeleting, deleteCabin } = useDeleteCabin();

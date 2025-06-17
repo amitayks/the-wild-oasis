@@ -16,7 +16,7 @@ import Modal from "../../../ui/Modal";
 import { formatCurrency, formatDistanceFromNow } from "../../../utils/helpers";
 import { useCheckout } from "../../check-in-out/useCheckout";
 import { useDeleteBooking } from "../useDeleteBooking";
-import { Amount, Cabin, Stacked } from "./styled";
+import { Amount, Cabin, Stacked } from "./BookingRow.styled";
 
 function BookingRow({
   booking: {

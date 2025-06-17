@@ -5,7 +5,7 @@ import Row from "../../../ui/Row";
 import { useTodayActivity } from "../useTodayActivity";
 import Spinner from "../../../ui/Spinner";
 import TodayItem from "../TodayItem";
-import { NoActivity, StyledToday, TodayList } from "./styled";
+import { NoActivity, StyledToday, TodayList } from "./TodayActivity.styled";
 
 function TodayActivity() {
   const { stays, isLoading } = useTodayActivity();

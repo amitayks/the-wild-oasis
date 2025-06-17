@@ -1,4 +1,4 @@
-import { Icon, StyledStat, Title, Value } from "./styled";
+import { Icon, StyledStat, Title, Value } from "./Stat.styled";
 
 function Stat({ icon, title, value, color }) {
   return (

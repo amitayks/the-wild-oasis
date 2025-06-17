@@ -1,6 +1,6 @@
 import Button from "../Button";
 import Heading from "../Heading";
-import { StyledConfirmDelete } from "./styled";
+import { StyledConfirmDelete } from "./ConfirmDelete.styled";
 
 function ConfirmDelete({ resourceName, onConfirm, disabled, onCloseModal }) {
   return (

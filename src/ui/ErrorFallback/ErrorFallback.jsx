@@ -1,5 +1,5 @@
 import GlobalStyle from "../../styles/GlobalStyle";
-import { Box, StyledErrorFallback } from "./styled";
+import { Box, StyledErrorFallback } from "./ErrorFallback.styled";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (

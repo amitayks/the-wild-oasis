@@ -6,7 +6,7 @@ import SalesChart from "../SalesChart";
 import { Stats } from "../Stats";
 import { useRecentBooking } from "../useRecentBooking";
 import { useRecentStays } from "../useRecentStays";
-import { StyledDashboardLayout } from "./styled";
+import { StyledDashboardLayout } from "./DashboardLayout.styled";
 
 function DashboardLayout() {
   const { bookings, isLoading } = useRecentBooking();

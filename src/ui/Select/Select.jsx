@@ -1,4 +1,4 @@
-import { StyledSelect } from "./styled";
+import { StyledSelect } from "./Select.styled";
 
 function Select({ options, value, onChange, ...props }) {
   return (

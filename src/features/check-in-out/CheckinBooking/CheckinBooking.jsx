@@ -1,5 +1,5 @@
 import BookingDataBox from "../../bookings/BookingDataBox";
-import { Box } from "./styled";
+import { Box } from "./CheckinBooking.styled";
 
 import Button from "../../../ui/Button";
 import ButtonGroup from "../../../ui/ButtonGroup";

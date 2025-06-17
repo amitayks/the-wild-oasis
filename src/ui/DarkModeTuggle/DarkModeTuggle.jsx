@@ -1,8 +1,9 @@
 import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi";
-import ButtonIcon from "./ButtonIcon";
-import { useDarkMode } from "../context/useDarkMode";
+import ButtonIcon from "../ButtonIcon";
+import { useDarkMode } from "../../context/useDarkMode";
+import { memo } from "react";
 
-function DarkModeTuggle() {
+export const DarkModeTuggle = memo(() => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (
@@ -10,6 +11,6 @@ function DarkModeTuggle() {
       {isDarkMode ? <HiOutlineSun /> : <HiOutlineMoon />}
     </ButtonIcon>
   );
-}
+});
 
-export default DarkModeTuggle;
+DarkModeTuggle.displayName = "DarkModeTuggle";

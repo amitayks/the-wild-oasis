@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router-dom";
-import { FilterButton, StyledFilter } from "./styled";
+import { FilterButton, StyledFilter } from "./Filter.styled";
 
 function Filter({ options, filterName }) {
   const [searchParams, setSearchParams] = useSearchParams();

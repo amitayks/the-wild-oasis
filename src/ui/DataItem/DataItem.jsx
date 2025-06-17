@@ -1,5 +1,5 @@
 import { Label } from "recharts";
-import { StyledDataItem } from "./styled";
+import { StyledDataItem } from "./DataItem.styled";
 
 function DataItem({ icon, label, children }) {
   return (
