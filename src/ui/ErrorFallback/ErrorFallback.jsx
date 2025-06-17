@@ -1,7 +1,7 @@
 import GlobalStyle from "../../styles/GlobalStyle";
 import { Box, StyledErrorFallback } from "./ErrorFallback.styled";
 
-function ErrorFallback({ error, resetErrorBoundary }) {
+export const ErrorFallback = ({ error, resetErrorBoundary }) => {
   return (
     <>
       <GlobalStyle />
@@ -14,6 +14,4 @@ function ErrorFallback({ error, resetErrorBoundary }) {
       </StyledErrorFallback>
     </>
   );
-}
-
-export default ErrorFallback;
+};

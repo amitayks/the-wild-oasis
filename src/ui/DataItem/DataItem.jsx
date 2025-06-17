@@ -1,7 +1,7 @@
 import { Label } from "recharts";
 import { StyledDataItem } from "./DataItem.styled";
 
-function DataItem({ icon, label, children }) {
+export const DataItem = ({ icon, label, children }) => {
   return (
     <StyledDataItem>
       <Label>
@@ -11,6 +11,4 @@ function DataItem({ icon, label, children }) {
       {children}
     </StyledDataItem>
   );
-}
-
-export default DataItem;
+};

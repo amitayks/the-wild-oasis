@@ -1,8 +1,8 @@
 import { HiPencil, HiSquare2Stack, HiTrash } from "react-icons/hi2";
-import ConfirmDelete from "../../../ui/ConfirmDelete";
-import Menus from "../../../ui/Menus";
-import Modal from "../../../ui/Modal";
-import Table from "../../../ui/Table";
+import { ConfirmDelete } from "../../../ui/ConfirmDelete";
+import { Menus } from "../../../ui/Menus";
+import { Modal } from "../../../ui/Modal";
+import { Table } from "../../../ui/Table";
 import { formatCurrency } from "../../../utils/helpers";
 import { CreateCabinForm } from "../toChange/CreateCabinForm";
 import { useCreateCabin } from "../useCreateCabin";

@@ -1,7 +1,5 @@
 import { StyledSpinner } from "./Spinner.styled";
 
-function Spinner({ ...props }) {
+export const Spinner = ({ ...props }) => {
   return <StyledSpinner {...props} />;
-}
-
-export default Spinner;
+};

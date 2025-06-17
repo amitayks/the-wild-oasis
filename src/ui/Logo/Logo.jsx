@@ -1,7 +1,7 @@
 import { useDarkMode } from "../../context/useDarkMode";
 import { Img, StyledLogo } from "./Logo.styled";
 
-function Logo() {
+export const Logo = () => {
   const { isDarkMode } = useDarkMode();
   const src = isDarkMode ? "/logo-dark.png" : "/logo-light.png";
   const alt = isDarkMode ? "Logo Dark" : "Logo Light";
@@ -11,6 +11,4 @@ function Logo() {
       <Img src={src} alt={alt} />
     </StyledLogo>
   );
-}
-
-export default Logo;
+};

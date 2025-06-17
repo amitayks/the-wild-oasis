@@ -1,6 +1,6 @@
 import { StyledSelect } from "./Select.styled";
 
-function Select({ options, value, onChange, ...props }) {
+export const Select = ({ options, value, onChange, ...props }) => {
   return (
     <StyledSelect onChange={onChange} value={value} {...props}>
       {options.map((option) => (
@@ -10,6 +10,4 @@ function Select({ options, value, onChange, ...props }) {
       ))}
     </StyledSelect>
   );
-}
-
-export default Select;
+};

@@ -1,1 +1,1 @@
-export { default } from "./FormRowVertical";
+export { FormRowVertical } from "./FormRowVertical";

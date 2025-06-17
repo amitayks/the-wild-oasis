@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
-import Header from "../Header";
-import Sidebar from "../Sidebar";
+import { Header } from "../Header";
+import { Sidebar } from "../Sidebar";
 import { Container, Main, StyledAppLayout } from "./styles";
 
-function AppLayout() {
+export const AppLayout = () => {
   return (
     <StyledAppLayout>
       <Header />
@@ -15,6 +15,4 @@ function AppLayout() {
       </Main>
     </StyledAppLayout>
   );
-}
-
-export default AppLayout;
+};

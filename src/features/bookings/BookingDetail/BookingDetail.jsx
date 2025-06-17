@@ -4,16 +4,16 @@ import { useCheckout } from "../../check-in-out/useCheckout";
 import { useBooking } from "../useBooking";
 import { useDeleteBooking } from "../useDeleteBooking";
 
-import Button from "../../../ui/Button";
-import ButtonGroup from "../../../ui/ButtonGroup";
-import ButtonText from "../../../ui/ButtonText";
-import ConfirmDelete from "../../../ui/ConfirmDelete";
+import { Button } from "../../../ui/Button";
+import { ButtonGroup } from "../../../ui/ButtonGroup";
+import { ButtonText } from "../../../ui/ButtonText";
+import { ConfirmDelete } from "../../../ui/ConfirmDelete";
 import { Empty } from "../../../ui/Empty";
-import Heading from "../../../ui/Heading";
-import Modal from "../../../ui/Modal";
-import Row from "../../../ui/Row";
-import Spinner from "../../../ui/Spinner";
-import Tag from "../../../ui/Tag";
+import { Heading } from "../../../ui/Heading";
+import { Modal } from "../../../ui/Modal";
+import { Row } from "../../../ui/Row";
+import { Spinner } from "../../../ui/Spinner";
+import { Tag } from "../../../ui/Tag";
 import { BookingDataBox } from "../BookingDataBox";
 import { HeadingGroup } from "./BookingDetail.styled";
 

@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import { FilterButton, StyledFilter } from "./Filter.styled";
 
-function Filter({ options, filterName }) {
+export const Filter = ({ options, filterName }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const currentValue = searchParams.get(filterName) || options?.[0]?.value;
 
@@ -29,6 +29,4 @@ function Filter({ options, filterName }) {
       })}
     </StyledFilter>
   );
-}
-
-export default Filter;
+};

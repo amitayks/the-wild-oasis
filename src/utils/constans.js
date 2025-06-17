@@ -38,8 +38,8 @@ export const BOOKING_SORT_OPTIONS = [
 ];
 
 export const STAT_ICONS = {
-  bookings: <HiOutlineBriefcase />,
-  sales: <HiOutlineBanknotes />,
-  checkins: <HiOutlineCalendarDateRange />,
-  occupancy: <HiOutlineChartBar />,
+  bookings: HiOutlineBriefcase,
+  sales: HiOutlineBanknotes,
+  checkins: HiOutlineCalendarDateRange,
+  occupancy: HiOutlineChartBar,
 };

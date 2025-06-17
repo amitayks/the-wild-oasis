@@ -6,9 +6,9 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import { DarkModeProvider } from "./context/DarkModeContext";
 import GlobalStyle from "./styles/GlobalStyle";
-import AppLayout from "./ui/AppLayout";
-import ProtectedRoute from "./ui/ProtectedRoute";
-import Spinner from "./ui/Spinner";
+import { AppLayout } from "./ui/AppLayout";
+import { ProtectedRoute } from "./ui/ProtectedRoute";
+import { Spinner } from "./ui/Spinner";
 
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Bookings = lazy(() => import("./pages/Bookings"));

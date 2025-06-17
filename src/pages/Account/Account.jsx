@@ -1,9 +1,9 @@
-import UpdatePasswordForm from "../features/authentication/UpdatePasswordForm";
-import UpdateUserDataForm from "../features/authentication/UpdateUserDataForm";
-import { Heading } from "../ui/Heading";
-import { Row } from "../ui/Row";
+import { UpdatePasswordForm } from "../../features/authentication/UpdatePasswordForm";
+import { UpdateUserDataForm } from "../../features/authentication/UpdateUserDataForm";
+import { Heading } from "../../ui/Heading";
+import { Row } from "../../ui/Row";
 
-export const Account = () => {
+const Account = () => {
   return (
     <>
       <Heading as='h1'>Update your account</Heading>
@@ -20,3 +20,5 @@ export const Account = () => {
     </>
   );
 };
+
+export default Account;

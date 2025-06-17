@@ -1,1 +1,1 @@
-export { default } from "./TableOperations";
+export { TableOperations } from "./TableOperations";

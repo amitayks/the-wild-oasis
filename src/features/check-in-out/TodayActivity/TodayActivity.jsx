@@ -1,6 +1,6 @@
-import Heading from "../../../ui/Heading";
-import Row from "../../../ui/Row";
-import Spinner from "../../../ui/Spinner";
+import { Heading } from "../../../ui/Heading";
+import { Row } from "../../../ui/Row";
+import { Spinner } from "../../../ui/Spinner";
 import { TodayItem } from "../TodayItem";
 import { useTodayActivity } from "../useTodayActivity";
 import { NoActivity, StyledToday, TodayList } from "./TodayActivity.styled";

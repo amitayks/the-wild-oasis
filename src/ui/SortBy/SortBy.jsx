@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router-dom";
-import Select from "../Select";
+import { Select } from "../Select";
 import { memo, useMemo } from "react";
 import { useCallback } from "react";
 

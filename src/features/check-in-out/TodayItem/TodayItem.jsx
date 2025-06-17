@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import Button from "../../../ui/Button";
-import Flag from "../../../ui/Flag";
-import Tag from "../../../ui/Tag";
+import { Button } from "../../../ui/Button";
+import { Flag } from "../../../ui/Flag";
+import { Tag } from "../../../ui/Tag";
 import { CheckoutButton } from "../CheckoutButton";
 import { Guest, StyledTodayItem } from "./TodayItem.styled";
 import { memo } from "react";

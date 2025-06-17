@@ -1,12 +1,12 @@
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
-import Logout from "../../features/authentication/Logout";
-import ButtonIcon from "../ButtonIcon";
+import { Logout } from "../../features/authentication/Logout";
+import { ButtonIcon } from "../ButtonIcon";
 import { DarkModeTuggle } from "../DarkModeTuggle";
 import { StyledHeaderMenu } from "./HeaderMenu.styled";
 
-function HeaderMenu() {
+export const HeaderMenu = () => {
   const navigate = useNavigate();
 
   return (
@@ -24,6 +24,4 @@ function HeaderMenu() {
       </li>
     </StyledHeaderMenu>
   );
-}
-
-export default HeaderMenu;
+};

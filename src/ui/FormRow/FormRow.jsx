@@ -1,7 +1,7 @@
 import { Label } from "recharts";
 import { Error, StyledFormRow } from "./FormRow.styled";
 
-function FormRow({ children, error, label }) {
+export const FormRow = ({ children, error, label }) => {
   return (
     <StyledFormRow>
       <Label htmlFor={children.props?.id}>{label}</Label>
@@ -9,6 +9,4 @@ function FormRow({ children, error, label }) {
       {error && <Error>{error}</Error>}
     </StyledFormRow>
   );
-}
-
-export default FormRow;
+};

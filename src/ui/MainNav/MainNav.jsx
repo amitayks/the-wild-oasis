@@ -7,7 +7,7 @@ import {
 } from "react-icons/hi2";
 import { NavList, StyledNavLink } from "./MainNav.styled";
 
-function MainNav({ onCloseModal }) {
+export const MainNav = ({ onCloseModal }) => {
   const handleLinkClick = () => {
     // Close modal when a link is clicked (only in mobile menu)
     if (onCloseModal) {
@@ -51,6 +51,4 @@ function MainNav({ onCloseModal }) {
       </NavList>
     </nav>
   );
-}
-
-export default MainNav;
+};

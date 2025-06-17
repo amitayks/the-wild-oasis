@@ -6,7 +6,7 @@ import { Button, Overlay, StyledModal } from "./Modal.styled";
 
 const ModalContext = createContext();
 
-function Modal({ children }) {
+export const Modal = ({ children }) => {
   const [openModal, setOpenModal] = useState("");
 
   const close = () => setOpenModal("");
@@ -17,7 +17,7 @@ function Modal({ children }) {
       {children}
     </ModalContext.Provider>
   );
-}
+};
 
 function Open({ children, opens: opensWindowName }) {
   const { open } = useContext(ModalContext);
@@ -47,5 +47,3 @@ function Window({ children, name }) {
 
 Modal.Open = Open;
 Modal.Window = Window;
-
-export default Modal;

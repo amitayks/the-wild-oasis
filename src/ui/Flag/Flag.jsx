@@ -1,7 +1,5 @@
 import { StyledFlag } from "./Flag.styled";
 
-function Flag({ ...props }) {
+export const Flag = ({ ...props }) => {
   return <StyledFlag {...props} />;
-}
-
-export default Flag;
+};

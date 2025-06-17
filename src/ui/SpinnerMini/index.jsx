@@ -1,1 +1,1 @@
-export { default } from "./SpinnerMini";
+export { SpinnerMini } from "./SpinnerMini";

@@ -1,1 +1,1 @@
-export { default } from "./ConfirmDelete";
+export { ConfirmDelete } from "./ConfirmDelete";

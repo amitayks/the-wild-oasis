@@ -6,7 +6,7 @@ import { Menu, StyledButton, StyledList, StyledToggle } from "./Menus.styled";
 
 const MenusContext = createContext();
 
-function Menus({ children }) {
+export const Menus = ({ children }) => {
   const [openId, setOpenId] = useState("");
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const close = () => setOpenId("");
@@ -25,7 +25,7 @@ function Menus({ children }) {
       <div>{children}</div>
     </MenusContext.Provider>
   );
-}
+};
 
 function Toggle({ id }) {
   const { openId, open, close, setPosition } = useContext(MenusContext);
@@ -83,5 +83,3 @@ Menus.Menu = Menu;
 Menus.Toggle = Toggle;
 Menus.List = List;
 Menus.Button = Button;
-
-export default Menus;

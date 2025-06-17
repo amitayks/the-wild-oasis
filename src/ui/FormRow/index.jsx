@@ -1,1 +1,1 @@
-export { default } from "./FormRow";
+export { FormRow } from "./FormRow";

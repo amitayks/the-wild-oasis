@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../features/authentication/useUser";
 
-import Spinner from "../Spinner";
+import { Spinner } from "../Spinner";
 import { FullPage } from "./ProtectedRoute.styled";
 
-function ProtectedRout({ children }) {
+export const ProtectedRoute = ({ children }) => {
   const navigate = useNavigate();
   const { isLoading, isAuthenticated } = useUser();
 
@@ -22,6 +22,4 @@ function ProtectedRout({ children }) {
 
   //4:
   if (isAuthenticated) return children;
-}
-
-export default ProtectedRout;
+};

@@ -1,1 +1,1 @@
-export { default } from "./DataItem";
+export { DataItem } from "./DataItem";

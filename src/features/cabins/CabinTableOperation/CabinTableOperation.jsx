@@ -1,6 +1,6 @@
-import Filter from "../../../ui/Filter";
+import { Filter } from "../../../ui/Filter";
 import { SortBy } from "../../../ui/SortBy";
-import TableOperations from "../../../ui/TableOperations";
+import { TableOperations } from "../../../ui/TableOperations";
 import {
   CABIN_FILTER_OPTIONS,
   CABIN_SORT_OPTIONS,

@@ -1,12 +1,12 @@
 import { HiOutlineBars3 } from "react-icons/hi2";
-import UserAvatar from "../../features/authentication/UserAvatar";
-import ButtonIcon from "../ButtonIcon";
-import HeaderMenu from "../HeaderMenu";
-import MobileMenu from "../MobileMenu";
-import Modal from "../Modal";
+import { UserAvatar } from "../../features/authentication/UserAvatar";
+import { ButtonIcon } from "../ButtonIcon";
+import { HeaderMenu } from "../HeaderMenu";
+import { MobileMenu } from "../MobileMenu";
+import { Modal } from "../Modal";
 import { StyledHeader } from "./Header.styled";
 
-function Header() {
+export const Header = () => {
   return (
     <StyledHeader>
       <Modal>
@@ -25,6 +25,4 @@ function Header() {
       <HeaderMenu />
     </StyledHeader>
   );
-}
-
-export default Header;
+};

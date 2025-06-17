@@ -1,7 +1,5 @@
 import { StyledInput } from "./Input.styled";
 
-function Input({ ...props }) {
+export const Input = ({ ...props }) => {
   return <StyledInput {...props} />;
-}
-
-export default Input;
+};
