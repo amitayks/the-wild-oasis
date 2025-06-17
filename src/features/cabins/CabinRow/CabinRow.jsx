@@ -9,8 +9,9 @@ import { useCreateCabin } from "../useCreateCabin";
 import { useDeleteCabin } from "../useDeleteCabin";
 
 import { Cabin, Discount, Img, Price } from "./CabinRow.styled";
+import { memo } from "react";
 
-function CabinRow({ cabin }) {
+export const CabinRow = memo(({ cabin }) => {
   const { isDeleting, deleteCabin } = useDeleteCabin();
   const { isCreating, createCabin } = useCreateCabin();
 
@@ -90,6 +91,6 @@ function CabinRow({ cabin }) {
       </div>
     </Table.Row>
   );
-}
+});
 
-export default CabinRow;
+CabinRow.displayName = "CabinRow";

@@ -1,8 +1,8 @@
-import Button from "../../ui/Button";
-import CreateCabinForm from "./CreateCabinForm";
-import Modal from "../../ui/Modal";
+import Button from "../../../ui/Button";
+import CreateCabinForm from "../CreateCabinForm";
+import Modal from "../../../ui/Modal";
 
-function AddCabin() {
+export const AddCabin = () => {
   return (
     <div>
       <Modal>
@@ -16,6 +16,4 @@ function AddCabin() {
       </Modal>
     </div>
   );
-}
-
-export default AddCabin;
+};
