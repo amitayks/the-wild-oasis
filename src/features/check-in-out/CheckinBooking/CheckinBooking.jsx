@@ -1,16 +1,16 @@
 import { BookingDataBox } from "../../bookings/BookingDataBox";
 import { Box } from "./CheckinBooking.styled";
 
-import Button from "../../../ui/Button";
-import ButtonGroup from "../../../ui/ButtonGroup";
-import ButtonText from "../../../ui/ButtonText";
-import Heading from "../../../ui/Heading";
-import Row from "../../../ui/Row";
+import { Button } from "../../../ui/Button";
+import { ButtonGroup } from "../../../ui/ButtonGroup";
+import { ButtonText } from "../../../ui/ButtonText";
+import { Checkbox } from "../../../ui/Checkbox";
+import { Heading } from "../../../ui/Heading";
+import { Row } from "../../../ui/Row";
+import { Spinner } from "../../../ui/Spinner";
 
 import { useEffect, useState } from "react";
 import { useMoveBack } from "../../../hooks/useMoveBack";
-import Checkbox from "../../../ui/Checkbox";
-import Spinner from "../../../ui/Spinner";
 import { formatCurrency } from "../../../utils/helpers";
 import { useBooking } from "../../bookings/useBooking";
 import { useSettings } from "../../settings/useSettings";

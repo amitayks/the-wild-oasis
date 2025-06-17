@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import LoginForm from "../features/authentication/LoginForm";
-import Heading from "../ui/Heading";
-import Logo from "../ui/Logo";
+import { LoginForm } from "../features/authentication/LoginForm";
+import { Heading } from "../ui/Heading";
+import { Logo } from "../ui/Logo";
 
 const LoginLayout = styled.main`
   min-height: 100vh;
@@ -13,7 +13,7 @@ const LoginLayout = styled.main`
   background-color: var(--color-grey-50);
 `;
 
-function Login() {
+export const Login = () => {
   return (
     <LoginLayout>
       <Logo />
@@ -21,6 +21,4 @@ function Login() {
       <LoginForm />
     </LoginLayout>
   );
-}
-
-export default Login;
+};

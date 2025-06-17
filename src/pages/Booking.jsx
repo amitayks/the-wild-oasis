@@ -1,11 +1,11 @@
-import { BookingDataBox } from "../features/bookings/BookingDetail";
+import { BookingDetail } from "../features/bookings/BookingDetail";
 
-function Booking() {
+export const Booking = () => {
   return (
     <>
       <BookingDetail />
     </>
   );
-}
+};
 
 export default Booking;

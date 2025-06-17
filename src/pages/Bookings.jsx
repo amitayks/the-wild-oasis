@@ -1,9 +1,9 @@
 import { BookingTable } from "../features/bookings/BookingTable/BookingTable";
 import { BookingTableOperations } from "../features/bookings/BookingTableOperations";
-import Heading from "../ui/Heading";
-import Row from "../ui/Row";
+import { Heading } from "../ui/Heading";
+import { Row } from "../ui/Row";
 
-function Bookings() {
+export const Bookings = () => {
   return (
     <>
       <Row type='horizontal'>
@@ -14,6 +14,4 @@ function Bookings() {
       <BookingTable />
     </>
   );
-}
-
-export default Bookings;
+};
