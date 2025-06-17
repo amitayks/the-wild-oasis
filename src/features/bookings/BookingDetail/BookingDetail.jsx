@@ -17,7 +17,7 @@ import Tag from "../../../ui/Tag";
 import { BookingDataBox } from "../BookingDataBox";
 import { HeadingGroup } from "./BookingDetail.styled";
 
-function BookingDetail() {
+export const BookingDetail = () => {
   const navigate = useNavigate();
   const moveBack = useMoveBack();
   const { booking, isLoading } = useBooking();
@@ -84,6 +84,4 @@ function BookingDetail() {
       </ButtonGroup>
     </>
   );
-}
-
-export default BookingDetail;
+};
