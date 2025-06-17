@@ -1,1 +1,1 @@
-export { default } from "./UserAvatar";
+export { UserAvatar } from "./UserAvatar";

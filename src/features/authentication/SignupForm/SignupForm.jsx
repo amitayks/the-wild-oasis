@@ -1,11 +1,13 @@
 import { useForm } from "react-hook-form";
-import Button from "../../ui/Button";
-import Form from "../../ui/Form";
-import FormRow from "../../ui/FormRow";
-import Input from "../../ui/Input";
-import { useCreateUser } from "./useCreateUser";
 
-function SignupForm() {
+import { Button } from "../../../ui/Button";
+import { Form } from "../../../ui/Form";
+import { FormRow } from "../../../ui/FormRow";
+import { Input } from "../../../ui/Input";
+
+import { useCreateUser } from "../useCreateUser";
+
+export const SignupForm = () => {
   const { signup, isLoasing } = useCreateUser();
 
   const {
@@ -105,6 +107,4 @@ function SignupForm() {
       </FormRow>
     </Form>
   );
-}
-
-export default SignupForm;
+};

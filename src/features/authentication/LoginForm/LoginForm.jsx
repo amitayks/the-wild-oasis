@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { useLogin } from "./useLogin";
+import { useLogin } from "../useLogin";
 
-import Button from "../../ui/Button";
-import Form from "../../ui/Form";
-import FormRowVertical from "../../ui/FormRowVertical";
-import Input from "../../ui/Input";
-import SpinnerMini from "../../ui/SpinnerMini";
+import { Button } from "../../../ui/Button";
+import { Form } from "../../../ui/Form";
+import { FormRowVertical } from "../../../ui/FormRowVertical";
+import { Input } from "../../../ui/Input";
+import { SpinnerMini } from "../../../ui/SpinnerMini";
 
-function LoginForm() {
+export const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login, isLoading } = useLogin();
@@ -58,6 +58,4 @@ function LoginForm() {
       </FormRowVertical>
     </Form>
   );
-}
-
-export default LoginForm;
+};

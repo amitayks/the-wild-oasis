@@ -1,11 +1,11 @@
-import Form from "../../ui/Form";
-import FormRow from "../../ui/FormRow";
-import Input from "../../ui/Input";
-import { useSettings } from "./useSettings";
-import { useUpdateSettings } from "./useUpdateSettings";
-import Spinner from "../../ui/Spinner";
+import Form from "../../../ui/Form";
+import FormRow from "../../../ui/FormRow";
+import Input from "../../../ui/Input";
+import { useSettings } from "../useSettings";
+import { useUpdateSettings } from "../useUpdateSettings";
+import Spinner from "../../../ui/Spinner";
 
-function UpdateSettingsForm() {
+export const UpdateSettingsForm = () => {
   const { isUpdating, updateSettings } = useUpdateSettings();
   const {
     isLoading,
@@ -73,6 +73,6 @@ function UpdateSettingsForm() {
       </FormRow>
     </Form>
   );
-}
+};
 
 export default UpdateSettingsForm;

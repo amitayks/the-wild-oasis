@@ -1,7 +1,7 @@
 import { useUser } from "../useUser";
 import { Avatar, StyledUserAvatar } from "./UserAvatar.styled";
 
-function UserAvatar() {
+export const UserAvatar = () => {
   const { user } = useUser();
   const { fullName, avatar } = user.user_metadata;
 
@@ -14,6 +14,4 @@ function UserAvatar() {
       <span>{fullName} </span>
     </StyledUserAvatar>
   );
-}
-
-export default UserAvatar;
+};
