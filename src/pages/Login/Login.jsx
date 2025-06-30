@@ -1,7 +1,7 @@
 import { LoginForm } from "../../features/authentication/LoginForm";
 import { Heading } from "../../ui/Heading";
 import { Logo } from "../../ui/Logo";
-import { LoginLayout } from "./toChange.styled";
+import { LoginLayout } from "./Login.styled";
 
 const Login = () => {
   return (

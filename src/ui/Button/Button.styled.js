@@ -84,10 +84,12 @@ export const StyledButton = styled.button`
   ${(props) => variations[props.variations]}
   
   @media (max-width: 768px) {
-    min-width: 12rem;
+    /* min-width: 12rem; */
+    max-width: 300px;
   }
 
   @media (max-width: 480px) {
-    min-width: 10rem;
+    /* min-width: 10rem; */
+    max-width: 4rem;
   }
 `;

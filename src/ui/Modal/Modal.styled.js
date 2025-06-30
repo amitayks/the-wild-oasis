@@ -14,11 +14,11 @@ export const StyledModal = styled.div`
   overflow-y: auto;
 
   @media (max-width: 768px) {
-    padding: 2.4rem 2rem;
+    padding: 2rem 2rem;
     margin: 1rem;
     max-height: 95vh;
-    width: calc(100vw - 2rem);
-    max-width: fit-content;
+    width: calc(100vw - 8rem);
+    max-width: 80rem;
   }
 
   @media (max-width: 480px) {

@@ -20,6 +20,5 @@ export const ProtectedRoute = ({ children }) => {
       </FullPage>
     );
 
-  //4:
   if (isAuthenticated) return children;
 };
