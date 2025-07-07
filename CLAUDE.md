@@ -6,17 +6,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - `npm run dev` - Start development server with Vite
 - `npm run build` - Build the project for production
+- `npm run preview` - Preview the production build locally
 - `npm run lint` - Run Biome linter checks
 - `npm run lint:fix` - Run Biome linter with auto-fix
-- `npm run format` - Check code formatting with Prettier
-- `npm run format:fix` - Format code with Prettier
-- `npm run format:prettier` - Format all files with Prettier
-- `npm run preview` - Preview the production build locally
+- `npm run format` - Check code formatting with Biome
+- `npm run format:fix` - Format code with Biome
+- `npm run typecheck` - Run TypeScript type checking
 
 ## Project Architecture
 
 ### Tech Stack
-- **Frontend**: React 18 with Vite
+- **Frontend**: React 18 with Vite and TypeScript
 - **Backend**: Supabase (PostgreSQL + Auth + Storage)
 - **Styling**: Styled Components with CSS-in-JS
 - **State Management**: React Query for server state, React Context for client state
@@ -25,6 +25,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Charts**: Recharts
 - **Icons**: React Icons
 - **Notifications**: React Hot Toast
+- **Type Safety**: TypeScript with comprehensive type definitions
 
 ### Application Structure
 
