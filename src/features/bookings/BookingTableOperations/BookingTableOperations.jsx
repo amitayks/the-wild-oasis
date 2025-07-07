@@ -9,7 +9,7 @@ import {
 export const BookingTableOperations = () => {
   return (
     <TableOperations>
-      <Filter filterName='status' options={BOOKING_FILTER_OPTIONS} />
+      <Filter filterName="status" options={BOOKING_FILTER_OPTIONS} />
 
       <SortBy options={BOOKING_SORT_OPTIONS} />
     </TableOperations>

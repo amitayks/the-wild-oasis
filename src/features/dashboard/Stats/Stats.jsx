@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 import { STAT_ICONS } from "../../../utils/constans";
 import { formatCurrency } from "../../../utils/helpers";
-import { StyledStatsGrid } from "./Stats.styled";
 import { Stat } from "../Stat";
+import { StyledStatsGrid } from "./Stats.styled";
 
 export const Stats = ({ bookings, confirmStays, numDays, cabins }) => {
   // ✅ Memoize expensive calculations
@@ -30,26 +30,26 @@ export const Stats = ({ bookings, confirmStays, numDays, cabins }) => {
   return (
     <StyledStatsGrid>
       <Stat
-        color='blue'
-        title='Bookings'
+        color="blue"
+        title="Bookings"
         value={numBookings}
         icon={STAT_ICONS.bookings}
       />
       <Stat
-        color='green'
-        title='Sales'
+        color="green"
+        title="Sales"
         value={formattedSales}
         icon={STAT_ICONS.sales}
       />
       <Stat
-        color='indigo'
-        title='Check Ins'
+        color="indigo"
+        title="Check Ins"
         value={confirmStays?.length}
         icon={STAT_ICONS.checkins}
       />
       <Stat
-        color='yellow'
-        title='Occupancy Rate'
+        color="yellow"
+        title="Occupancy Rate"
         value={`${occupancyRate}%`}
         icon={STAT_ICONS.occupancy}
       />

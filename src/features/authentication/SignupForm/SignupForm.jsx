@@ -29,11 +29,11 @@ export const SignupForm = () => {
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
-      <FormRow label='Full name' error={errors.fullName?.message}>
+      <FormRow label="Full name" error={errors.fullName?.message}>
         <p>Full name</p>
         <Input
-          type='text'
-          id='fullName'
+          type="text"
+          id="fullName"
           disabled={isLoasing}
           {...register("fullName", {
             required: "Full name is required",
@@ -45,11 +45,11 @@ export const SignupForm = () => {
         />
       </FormRow>
 
-      <FormRow label='Email address' error={errors.email?.message}>
+      <FormRow label="Email address" error={errors.email?.message}>
         <p>Email</p>
         <Input
-          type='email'
-          id='email'
+          type="email"
+          id="email"
           disabled={isLoasing}
           {...register("email", {
             required: "Email is required",
@@ -62,14 +62,14 @@ export const SignupForm = () => {
       </FormRow>
 
       <FormRow
-        label='Password (min 8 characters)'
+        label="Password (min 8 characters)"
         error={errors.password?.message}
       >
         <p>Password</p>
 
         <Input
-          type='password'
-          id='password'
+          type="password"
+          id="password"
           disabled={isLoasing}
           {...register("password", {
             required: "Password is required",
@@ -81,12 +81,12 @@ export const SignupForm = () => {
         />
       </FormRow>
 
-      <FormRow label='Repeat password' error={errors.passwordConfirm?.message}>
+      <FormRow label="Repeat password" error={errors.passwordConfirm?.message}>
         <p>Repeat Password</p>
 
         <Input
-          type='password'
-          id='passwordConfirm'
+          type="password"
+          id="passwordConfirm"
           disabled={isLoasing}
           {...register("passwordConfirm", {
             required: "Password confirmation is required",
@@ -100,7 +100,7 @@ export const SignupForm = () => {
       </FormRow>
 
       <FormRow>
-        <Button disabled={isLoasing} variations='secondary' type='reset'>
+        <Button disabled={isLoasing} variations="secondary" type="reset">
           Cancel
         </Button>
         <Button disabled={isLoasing}>Create new user</Button>

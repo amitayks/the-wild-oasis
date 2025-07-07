@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <LoginLayout>
       <Logo />
-      <Heading as='h4'>Log in to you account</Heading>
+      <Heading as="h4">Log in to you account</Heading>
       <LoginForm />
     </LoginLayout>
   );

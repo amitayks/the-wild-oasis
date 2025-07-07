@@ -1,15 +1,14 @@
 import { format, isToday } from "date-fns";
+import { memo } from "react";
 import {
   HiOutlineChatBubbleBottomCenterText,
   HiOutlineCheckCircle,
   HiOutlineCurrencyDollar,
   HiOutlineHomeModern,
 } from "react-icons/hi2";
-
 import { DataItem } from "../../../ui/DataItem";
 import { Flag } from "../../../ui/Flag";
-
-import { formatDistanceFromNow, formatCurrency } from "../../../utils/helpers";
+import { formatCurrency, formatDistanceFromNow } from "../../../utils/helpers";
 import {
   Footer,
   Guest,
@@ -18,7 +17,6 @@ import {
   Section,
   StyledBookingDataBox,
 } from "./BookingDataBox.styled";
-import { memo } from "react";
 
 // A purely presentational component
 export const BookingDataBox = memo(({ booking }) => {
@@ -72,18 +70,18 @@ export const BookingDataBox = memo(({ booking }) => {
         {observations && (
           <DataItem
             icon={<HiOutlineChatBubbleBottomCenterText />}
-            label='Observations'
+            label="Observations"
           >
             {observations}
           </DataItem>
         )}
 
-        <DataItem icon={<HiOutlineCheckCircle />} label='Breakfast included?'>
+        <DataItem icon={<HiOutlineCheckCircle />} label="Breakfast included?">
           {hasBreakfast ? "Yes" : "No"}
         </DataItem>
 
         <Price isPaid={isPaid}>
-          <DataItem icon={<HiOutlineCurrencyDollar />} label={`Total price`}>
+          <DataItem icon={<HiOutlineCurrencyDollar />} label={"Total price"}>
             {formatCurrency(totalPrice)}
 
             {hasBreakfast &&

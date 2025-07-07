@@ -10,8 +10,8 @@ export const TodayActivity = () => {
 
   return (
     <StyledToday>
-      <Row type='horizontal'>
-        <Heading as='h2'>Today Activity</Heading>
+      <Row type="horizontal">
+        <Heading as="h2">Today Activity</Heading>
       </Row>
 
       {!isLoading ? (

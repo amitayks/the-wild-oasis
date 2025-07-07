@@ -1,4 +1,5 @@
 import { eachDayOfInterval, format, isSameDay, subDays } from "date-fns";
+import { memo } from "react";
 import {
   Area,
   AreaChart,
@@ -11,7 +12,6 @@ import {
 import { useDarkMode } from "../../../context/useDarkMode";
 import { Heading } from "../../../ui/Heading";
 import { StyledSalesChart } from "./SalesChart.styled";
-import { memo } from "react";
 
 export const SalesChart = memo(({ bookings, numDays }) => {
   const { isDarkMode } = useDarkMode();
@@ -49,37 +49,37 @@ export const SalesChart = memo(({ bookings, numDays }) => {
 
   return (
     <StyledSalesChart>
-      <Heading as='h2'>
+      <Heading as="h2">
         Sales from {format(allDays.at(0), "MM dd yyyy")} &mdash;{" "}
         {format(allDays.at(-1), "MM dd yyyy")}
       </Heading>
 
-      <ResponsiveContainer width='100%' height={300}>
+      <ResponsiveContainer width="100%" height={300}>
         <AreaChart
           data={data}
           // margin={{ top: 20, right: 20, left: 0, bottom: 0 }}
         >
           <XAxis
-            dataKey='label'
+            dataKey="label"
             tick={{ fill: colors.text }}
             tickLine={{ stroke: colors.text }}
           />
           <YAxis
-            unit='$'
+            unit="$"
             tick={{ fill: colors.text }}
             tickLine={{ stroke: colors.text }}
           />
-          <CartesianGrid stroke='4' />
+          <CartesianGrid stroke="4" />
           <Tooltip contentStyle={{ background: colors.background }} />
           <Area
-            type='monotone'
-            dataKey='totalSales'
+            type="monotone"
+            dataKey="totalSales"
             stroke={colors.totalSales.stroke}
             fill={colors.totalSales.fill}
           />
           <Area
-            type='monotone'
-            dataKey='extrasSales'
+            type="monotone"
+            dataKey="extrasSales"
             stroke={colors.extrasSales.stroke}
             fill={colors.extrasSales.fill}
           />

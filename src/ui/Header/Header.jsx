@@ -10,13 +10,13 @@ export const Header = () => {
   return (
     <StyledHeader>
       <Modal>
-        <Modal.Open opens='mobile-menu'>
-          <ButtonIcon className='mobile-menu-button'>
+        <Modal.Open opens="mobile-menu">
+          <ButtonIcon className="mobile-menu-button">
             <HiOutlineBars3 />
           </ButtonIcon>
         </Modal.Open>
 
-        <Modal.Window name='mobile-menu'>
+        <Modal.Window name="mobile-menu">
           <MobileMenu />
         </Modal.Window>
       </Modal>

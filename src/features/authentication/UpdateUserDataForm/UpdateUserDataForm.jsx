@@ -5,9 +5,8 @@ import { FileInput } from "../../../ui/FileInput";
 import { Form } from "../../../ui/Form";
 import { FormRow } from "../../../ui/FormRow";
 import { Input } from "../../../ui/Input";
-
-import { useUser } from "../useUser";
 import { useUpdateUser } from "../useUpdateUser";
+import { useUser } from "../useUser";
 
 export const UpdateUserDataForm = () => {
   const {
@@ -45,22 +44,22 @@ export const UpdateUserDataForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <FormRow label='Email address'>
+      <FormRow label="Email address">
         <Input value={email} disabled />
       </FormRow>
-      <FormRow label='Full name'>
+      <FormRow label="Full name">
         <Input
-          type='text'
+          type="text"
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
-          id='fullName'
+          id="fullName"
           disabled={isUpdating}
         />
       </FormRow>
-      <FormRow label='Avatar image'>
+      <FormRow label="Avatar image">
         <FileInput
-          id='avatar'
-          accept='image/*'
+          id="avatar"
+          accept="image/*"
           onChange={(e) => setAvatar(e.target.files[0])}
           disabled={isUpdating}
         />
@@ -69,8 +68,8 @@ export const UpdateUserDataForm = () => {
         <Button
           disabled={isUpdating}
           onClick={handleReset}
-          type='reset'
-          variations='secondary'
+          type="reset"
+          variations="secondary"
         >
           Cancel
         </Button>

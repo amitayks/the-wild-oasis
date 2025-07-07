@@ -6,8 +6,8 @@ import { Row } from "../../ui/Row";
 const Dashboard = () => {
   return (
     <>
-      <Row type='horizontal'>
-        <Heading as='h1'>Dashboard</Heading>
+      <Row type="horizontal">
+        <Heading as="h1">Dashboard</Heading>
         <DashboardFilter />
       </Row>
       <DashboardLayout />

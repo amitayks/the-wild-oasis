@@ -1,9 +1,9 @@
-import { CabinRow } from "../CabinRow";
-import { Spinner } from "../../../ui/Spinner";
-import { useCabin } from "../useCabin";
-import { Table } from "../../../ui/Table";
-import { Menus } from "../../../ui/Menus";
 import { useSearchParams } from "react-router-dom";
+import { Menus } from "../../../ui/Menus";
+import { Spinner } from "../../../ui/Spinner";
+import { Table } from "../../../ui/Table";
+import { CabinRow } from "../CabinRow";
+import { useCabin } from "../useCabin";
 
 export const CabinTable = () => {
   const { isLoading, cabins } = useCabin();
@@ -36,14 +36,14 @@ export const CabinTable = () => {
 
   return (
     <Menus>
-      <Table columns='0.6fr 1.8fr 2.2fr 1fr 1fr 1fr'>
+      <Table columns="0.6fr 1.8fr 2.2fr 1fr 1fr 1fr">
         <Table.Header>
-          <div></div>
+          <div />
           <div>Cabin</div>
           <div>Max capacity</div>
           <div>Price</div>
           <div>Discount</div>
-          <div></div>
+          <div />
         </Table.Header>
 
         <Table.Body

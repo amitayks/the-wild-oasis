@@ -1,8 +1,5 @@
 import { format, isToday } from "date-fns";
-
-import { Table } from "../../../ui/Table";
-import { Tag } from "../../../ui/Tag";
-
+import { memo } from "react";
 import { HiEye } from "react-icons/hi";
 import {
   HiArrowDownOnSquareStack,
@@ -13,11 +10,12 @@ import { useNavigate } from "react-router-dom";
 import { ConfirmDelete } from "../../../ui/ConfirmDelete";
 import { Menus } from "../../../ui/Menus";
 import { Modal } from "../../../ui/Modal";
+import { Table } from "../../../ui/Table";
+import { Tag } from "../../../ui/Tag";
 import { formatCurrency, formatDistanceFromNow } from "../../../utils/helpers";
 import { useCheckout } from "../../check-in-out/useCheckout";
 import { useDeleteBooking } from "../useDeleteBooking";
 import { Amount, Cabin, Stacked } from "./BookingRow.styled";
-import { memo } from "react";
 
 export const BookingRow = memo(
   ({
@@ -98,13 +96,13 @@ export const BookingRow = memo(
                 </Menus.Button>
               )}
 
-              <Modal.Open opens='delete-booking'>
+              <Modal.Open opens="delete-booking">
                 <Menus.Button icon={<HiTrash />}>delete Booking</Menus.Button>
               </Modal.Open>
             </Menus.List>
           </Menus.Menu>
 
-          <Modal.Window name='delete-booking'>
+          <Modal.Window name="delete-booking">
             <ConfirmDelete
               resourceName={`'Booking #${bookingId}'`}
               onConfirm={() => deletingBooking(bookingId)}

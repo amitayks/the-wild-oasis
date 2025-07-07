@@ -19,31 +19,31 @@ export const MainNav = ({ onCloseModal }) => {
     <nav>
       <NavList>
         <li>
-          <StyledNavLink to='/dashboard' onClick={handleLinkClick}>
+          <StyledNavLink to="/dashboard" onClick={handleLinkClick}>
             <HiOutlineHome />
             <span>Home</span>
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to='/bookings' onClick={handleLinkClick}>
+          <StyledNavLink to="/bookings" onClick={handleLinkClick}>
             <HiOutlineCalendarDays />
             <span>Bookings</span>
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to='/cabins' onClick={handleLinkClick}>
+          <StyledNavLink to="/cabins" onClick={handleLinkClick}>
             <HiOutlineHomeModern />
             <span>Cabins</span>
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to='/users' onClick={handleLinkClick}>
+          <StyledNavLink to="/users" onClick={handleLinkClick}>
             <HiOutlineUsers />
             <span>Users</span>
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to='/settings' onClick={handleLinkClick}>
+          <StyledNavLink to="/settings" onClick={handleLinkClick}>
             <HiOutlineCog6Tooth />
             <span>Settings</span>
           </StyledNavLink>

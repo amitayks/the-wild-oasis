@@ -1,5 +1,5 @@
-import { BookingDataBox } from "../../bookings/BookingDataBox";
-import { Box } from "./CheckinBooking.styled";
+import { useEffect, useState } from "react";
+import { useMoveBack } from "../../../hooks/useMoveBack";
 
 import { Button } from "../../../ui/Button";
 import { ButtonGroup } from "../../../ui/ButtonGroup";
@@ -8,13 +8,12 @@ import { Checkbox } from "../../../ui/Checkbox";
 import { Heading } from "../../../ui/Heading";
 import { Row } from "../../../ui/Row";
 import { Spinner } from "../../../ui/Spinner";
-
-import { useEffect, useState } from "react";
-import { useMoveBack } from "../../../hooks/useMoveBack";
 import { formatCurrency } from "../../../utils/helpers";
+import { BookingDataBox } from "../../bookings/BookingDataBox";
 import { useBooking } from "../../bookings/useBooking";
 import { useSettings } from "../../settings/useSettings";
 import { useCheckin } from "../useCheckin";
+import { Box } from "./CheckinBooking.styled";
 
 export const CheckinBooking = () => {
   const { checkin, isCheckingin } = useCheckin();
@@ -61,8 +60,8 @@ export const CheckinBooking = () => {
 
   return (
     <>
-      <Row type='horizontal'>
-        <Heading as='h1'>Check in booking #{bookingId}</Heading>
+      <Row type="horizontal">
+        <Heading as="h1">Check in booking #{bookingId}</Heading>
         <ButtonText onClick={moveBack}>&larr; Back</ButtonText>
       </Row>
 
@@ -76,7 +75,7 @@ export const CheckinBooking = () => {
               setAddBreakfast((a) => !a);
               setCheckPayment(false);
             }}
-            id='breakfast'
+            id="breakfast"
           >
             I confirm that want to add a brackfast for his entire stay (
             {formatCurrency(optinalBreakfastPrice)})
@@ -89,7 +88,7 @@ export const CheckinBooking = () => {
           checked={checkPayment}
           onChange={() => setCheckPayment((c) => !c)}
           disabled={checkPayment || isCheckingin}
-          id='cunfirm'
+          id="cunfirm"
         >
           {`I confirm that ${
             guests.fullName
@@ -99,8 +98,8 @@ export const CheckinBooking = () => {
           {addBreakfast &&
             `
           (${formatCurrency(totalPrice)} + ${formatCurrency(
-              optinalBreakfastPrice
-            )})`}
+            optinalBreakfastPrice
+          )})`}
         </Checkbox>
       </Box>
 
@@ -111,7 +110,7 @@ export const CheckinBooking = () => {
         >
           Check in booking #{bookingId}
         </Button>
-        <Button variations='secondary' onClick={moveBack}>
+        <Button variations="secondary" onClick={moveBack}>
           Back
         </Button>
       </ButtonGroup>

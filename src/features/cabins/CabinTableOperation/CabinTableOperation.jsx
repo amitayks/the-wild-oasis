@@ -9,7 +9,7 @@ import {
 export const CabinTableOperation = () => {
   return (
     <TableOperations>
-      <Filter options={CABIN_FILTER_OPTIONS} filterName='discount' />
+      <Filter options={CABIN_FILTER_OPTIONS} filterName="discount" />
       <SortBy options={CABIN_SORT_OPTIONS} />
     </TableOperations>
   );

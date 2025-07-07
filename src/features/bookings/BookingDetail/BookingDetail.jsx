@@ -1,9 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { useMoveBack } from "../../../hooks/useMoveBack";
-import { useCheckout } from "../../check-in-out/useCheckout";
-import { useBooking } from "../useBooking";
-import { useDeleteBooking } from "../useDeleteBooking";
-
 import { Button } from "../../../ui/Button";
 import { ButtonGroup } from "../../../ui/ButtonGroup";
 import { ButtonText } from "../../../ui/ButtonText";
@@ -14,7 +10,10 @@ import { Modal } from "../../../ui/Modal";
 import { Row } from "../../../ui/Row";
 import { Spinner } from "../../../ui/Spinner";
 import { Tag } from "../../../ui/Tag";
+import { useCheckout } from "../../check-in-out/useCheckout";
 import { BookingDataBox } from "../BookingDataBox";
+import { useBooking } from "../useBooking";
+import { useDeleteBooking } from "../useDeleteBooking";
 import { HeadingGroup } from "./BookingDetail.styled";
 
 export const BookingDetail = () => {
@@ -25,7 +24,7 @@ export const BookingDetail = () => {
   const { deletingBooking, isDeleting } = useDeleteBooking();
 
   if (isLoading) return <Spinner />;
-  if (!booking) return <Empty resourceName='booking' />;
+  if (!booking) return <Empty resourceName="booking" />;
 
   const statusToTagName = {
     unconfirmed: "blue",
@@ -35,9 +34,9 @@ export const BookingDetail = () => {
 
   return (
     <>
-      <Row type='horizontal'>
+      <Row type="horizontal">
         <HeadingGroup>
-          <Heading as='h1'>Booking #{booking.id}</Heading>
+          <Heading as="h1">Booking #{booking.id}</Heading>
           <Tag type={statusToTagName[booking.status]}>
             {booking.status.replace("-", " ")}
           </Tag>
@@ -61,11 +60,11 @@ export const BookingDetail = () => {
         )}
 
         <Modal>
-          <Modal.Open opens='delete-booking'>
-            <Button variations='danger'>delete Booking</Button>
+          <Modal.Open opens="delete-booking">
+            <Button variations="danger">delete Booking</Button>
           </Modal.Open>
 
-          <Modal.Window name='delete-booking'>
+          <Modal.Window name="delete-booking">
             <ConfirmDelete
               resourceName={`'Booking #${booking.id}'`}
               onConfirm={() =>
@@ -78,7 +77,7 @@ export const BookingDetail = () => {
           </Modal.Window>
         </Modal>
 
-        <Button variations='secondary' onClick={moveBack}>
+        <Button variations="secondary" onClick={moveBack}>
           Back
         </Button>
       </ButtonGroup>

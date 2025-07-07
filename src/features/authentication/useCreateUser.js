@@ -5,8 +5,8 @@ import { signup as signupApi } from "../../services/apiAuth";
 export function useCreateUser() {
   const { mutate: signup, isLoasing } = useMutation({
     mutationFn: signupApi,
-    onSuccess: (user) => {
-      toast.success(`User created successfully`);
+    onSuccess: (_user) => {
+      toast.success("User created successfully");
     },
   });
   return { signup, isLoasing };

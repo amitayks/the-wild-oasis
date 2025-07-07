@@ -1,7 +1,6 @@
-import { Box, StyledPageNotFound } from "./PageNotFound.styled";
-
 import { useMoveBack } from "../../hooks/useMoveBack";
 import { Heading } from "../../ui/Heading";
+import { Box, StyledPageNotFound } from "./PageNotFound.styled";
 
 const PageNotFound = () => {
   const moveBack = useMoveBack();
@@ -9,10 +8,10 @@ const PageNotFound = () => {
   return (
     <StyledPageNotFound>
       <Box>
-        <Heading as='h1'>
+        <Heading as="h1">
           The page you are looking for could not be found 😢
         </Heading>
-        <button onClick={moveBack} size='large'>
+        <button onClick={moveBack} size="large">
           &larr; Go back
         </button>
       </Box>

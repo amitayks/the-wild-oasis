@@ -1,7 +1,6 @@
+import { memo, useCallback, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Select } from "../Select";
-import { memo, useMemo } from "react";
-import { useCallback } from "react";
 
 export const SortBy = memo(({ options }) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -21,7 +20,7 @@ export const SortBy = memo(({ options }) => {
   return (
     <Select
       options={options}
-      type='whit'
+      type="whit"
       value={currentValue}
       onChange={handleChange}
     />

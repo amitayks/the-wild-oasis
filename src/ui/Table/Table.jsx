@@ -13,7 +13,7 @@ const TableContext = createContext();
 export const Table = ({ columns, children }) => {
   return (
     <TableContext.Provider value={{ columns }}>
-      <StyledTable role='table'>{children}</StyledTable>
+      <StyledTable role="table">{children}</StyledTable>
     </TableContext.Provider>
   );
 };
@@ -22,7 +22,7 @@ const Header = ({ children }) => {
   const { columns } = useContext(TableContext);
 
   return (
-    <StyledHeader role='row' columns={columns} as='header'>
+    <StyledHeader role="row" columns={columns} as="header">
       {children}
     </StyledHeader>
   );
@@ -31,7 +31,7 @@ const Row = ({ children }) => {
   const { columns } = useContext(TableContext);
 
   return (
-    <StyledRow role='row' columns={columns}>
+    <StyledRow role="row" columns={columns}>
       {children}
     </StyledRow>
   );

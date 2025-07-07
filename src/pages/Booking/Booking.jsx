@@ -1,10 +1,6 @@
 import { BookingDetail } from "../../features/bookings/BookingDetail";
 
 const Booking = () => {
-  return (
-    <>
-      <BookingDetail />
-    </>
-  );
+  return <BookingDetail />;
 };
 export default Booking;

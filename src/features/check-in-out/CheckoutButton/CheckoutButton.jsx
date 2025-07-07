@@ -6,8 +6,8 @@ export const CheckoutButton = ({ bookingId }) => {
 
   return (
     <Button
-      variations='primary'
-      size='small'
+      variations="primary"
+      size="small"
       onClick={() => checkout(bookingId)}
       disabled={isCheckingOut}
     >

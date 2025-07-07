@@ -1,3 +1,4 @@
+import { memo } from "react";
 import {
   Cell,
   Legend,
@@ -9,7 +10,6 @@ import {
 import { useDarkMode } from "../../../context/useDarkMode";
 import { Heading } from "../../../ui/Heading";
 import { ChartBox } from "./DurationChart.styled";
-import { memo } from "react";
 
 const startDataLight = [
   {
@@ -130,15 +130,15 @@ export const DurationChart = memo(({ confirmStays }) => {
 
   return (
     <ChartBox>
-      <Heading as='h2'>Stay duration summery</Heading>
-      <ResponsiveContainer width='100%' height={240}>
+      <Heading as="h2">Stay duration summery</Heading>
+      <ResponsiveContainer width="100%" height={240}>
         <PieChart>
           <Pie
             data={data}
-            nameKey='duration'
-            dataKey='value'
-            cx='40%'
-            cy='50%'
+            nameKey="duration"
+            dataKey="value"
+            cx="40%"
+            cy="50%"
             innerRadius={80}
             outerRadius={110}
             paddingAngle={2}
@@ -153,12 +153,12 @@ export const DurationChart = memo(({ confirmStays }) => {
           </Pie>
           <Tooltip />
           <Legend
-            verticalAlign='middle'
-            align='right'
-            width='30%'
-            layout='vertical'
+            verticalAlign="middle"
+            align="right"
+            width="30%"
+            layout="vertical"
             iconSize={15}
-            iconType='circle'
+            iconType="circle"
           />
         </PieChart>
       </ResponsiveContainer>

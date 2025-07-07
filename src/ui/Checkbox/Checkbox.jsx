@@ -10,7 +10,7 @@ export const Checkbox = ({
   return (
     <StyledCheckbox>
       <input
-        type='checkbox'
+        type="checkbox"
         id={id}
         checked={checked}
         onChange={onChange}

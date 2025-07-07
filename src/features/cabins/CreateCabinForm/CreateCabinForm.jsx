@@ -1,11 +1,10 @@
 import { useForm } from "react-hook-form";
-
-import { Input } from "../../../ui/Input";
-import { Form } from "../../../ui/Form";
 import { Button } from "../../../ui/Button";
 import { FileInput } from "../../../ui/FileInput";
-import { Textarea } from "../../../ui/Textarea";
+import { Form } from "../../../ui/Form";
 import { FormRow } from "../../../ui/FormRow";
+import { Input } from "../../../ui/Input";
+import { Textarea } from "../../../ui/Textarea";
 
 import { useCreateCabin } from "../useCreateCabin";
 import { useEditCabin } from "../useEditCabin";
@@ -30,7 +29,7 @@ export const CreateCabinForm = ({ cabinToEdit = {}, onCloseModal }) => {
       editCabin(
         { newCabinData: { ...data, image }, id: editId },
         {
-          onSuccess: (data) => {
+          onSuccess: (_data) => {
             reset();
             onCloseModal?.();
           },
@@ -40,7 +39,7 @@ export const CreateCabinForm = ({ cabinToEdit = {}, onCloseModal }) => {
       createCabin(
         { ...data, image: image },
         {
-          onSuccess: (data) => {
+          onSuccess: (_data) => {
             reset();
             onCloseModal?.();
           },
@@ -48,7 +47,7 @@ export const CreateCabinForm = ({ cabinToEdit = {}, onCloseModal }) => {
       );
   }
 
-  function onError(errors) {
+  function onError(_errors) {
     // console.log(errors);
   }
 
@@ -57,11 +56,11 @@ export const CreateCabinForm = ({ cabinToEdit = {}, onCloseModal }) => {
       onSubmit={handleSubmit(onSubmit, onError)}
       type={onCloseModal ? "modal" : "regular"}
     >
-      <FormRow label='Cabin name' error={errors?.name?.message}>
+      <FormRow label="Cabin name" error={errors?.name?.message}>
         <span>Cabin Name</span>
         <Input
-          type='text'
-          id='name'
+          type="text"
+          id="name"
           disabled={isWorking}
           {...register("name", {
             required: "This field is required",
@@ -69,11 +68,11 @@ export const CreateCabinForm = ({ cabinToEdit = {}, onCloseModal }) => {
         />
       </FormRow>
 
-      <FormRow label='Maximum capacity' error={errors?.maxCapacity?.message}>
+      <FormRow label="Maximum capacity" error={errors?.maxCapacity?.message}>
         <span>Maximum capacity</span>
         <Input
-          type='number'
-          id='maxCapacity'
+          type="number"
+          id="maxCapacity"
           disabled={isWorking}
           {...register("maxCapacity", {
             required: "This field is required",
@@ -85,11 +84,11 @@ export const CreateCabinForm = ({ cabinToEdit = {}, onCloseModal }) => {
         />
       </FormRow>
 
-      <FormRow label='Regular price' error={errors?.regularPrice?.message}>
+      <FormRow label="Regular price" error={errors?.regularPrice?.message}>
         <span>Regular price</span>
         <Input
-          type='number'
-          id='regularPrice'
+          type="number"
+          id="regularPrice"
           disabled={isWorking}
           {...register("regularPrice", {
             required: "This field is required",
@@ -101,12 +100,12 @@ export const CreateCabinForm = ({ cabinToEdit = {}, onCloseModal }) => {
         />
       </FormRow>
 
-      <FormRow label='Discount' error={errors?.discount?.message}>
+      <FormRow label="Discount" error={errors?.discount?.message}>
         <span>Discount</span>
 
         <Input
-          type='number'
-          id='discount'
+          type="number"
+          id="discount"
           disabled={isWorking}
           defaultValue={0}
           {...register("discount", {
@@ -119,14 +118,14 @@ export const CreateCabinForm = ({ cabinToEdit = {}, onCloseModal }) => {
       </FormRow>
 
       <FormRow
-        label='Description for website'
+        label="Description for website"
         error={errors?.description?.message}
       >
         <span>Description for website</span>
         <Textarea
-          type='number'
-          id='description'
-          defaultValue=''
+          type="number"
+          id="description"
+          defaultValue=""
           disabled={isWorking}
           {...register("description", {
             required: "This field is required",
@@ -134,11 +133,11 @@ export const CreateCabinForm = ({ cabinToEdit = {}, onCloseModal }) => {
         />
       </FormRow>
 
-      <FormRow label='Cabin photo'>
+      <FormRow label="Cabin photo">
         <span>Cabin photo</span>
         <FileInput
-          id='image'
-          accept='image/*'
+          id="image"
+          accept="image/*"
           {...register("image", {
             required: isEditSession ? false : "This field is required",
           })}
@@ -147,7 +146,7 @@ export const CreateCabinForm = ({ cabinToEdit = {}, onCloseModal }) => {
 
       <FormRow>
         {/* type is an HTML attribute! */}
-        <Button type='reset' onClick={() => onCloseModal?.()}>
+        <Button type="reset" onClick={() => onCloseModal?.()}>
           Cancel
         </Button>
         <Button disabled={isWorking}>
