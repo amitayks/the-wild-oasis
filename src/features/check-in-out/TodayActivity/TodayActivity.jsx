@@ -6,27 +6,27 @@ import { useTodayActivity } from "../useTodayActivity";
 import { NoActivity, StyledToday, TodayList } from "./TodayActivity.styled";
 
 export const TodayActivity = () => {
-  const { stays, isLoading } = useTodayActivity();
+	const { stays, isLoading } = useTodayActivity();
 
-  return (
-    <StyledToday>
-      <Row type="horizontal">
-        <Heading as="h2">Today Activity</Heading>
-      </Row>
+	return (
+		<StyledToday>
+			<Row type="horizontal">
+				<Heading as="h2">Today Activity</Heading>
+			</Row>
 
-      {!isLoading ? (
-        stays?.length > 0 ? (
-          <TodayList>
-            {stays.map((stay) => (
-              <TodayItem stay={stay} key={stay.id} />
-            ))}
-          </TodayList>
-        ) : (
-          <NoActivity>there is no activity for today</NoActivity>
-        )
-      ) : (
-        <Spinner />
-      )}
-    </StyledToday>
-  );
+			{!isLoading ? (
+				stays?.length > 0 ? (
+					<TodayList>
+						{stays.map((stay) => (
+							<TodayItem stay={stay} key={stay.id} />
+						))}
+					</TodayList>
+				) : (
+					<NoActivity>there is no activity for today</NoActivity>
+				)
+			) : (
+				<Spinner />
+			)}
+		</StyledToday>
+	);
 };

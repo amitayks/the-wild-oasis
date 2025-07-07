@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const sizes = {
-  small: css`
+	small: css`
     font-size: 1.2rem;
     padding: 0.4rem 0.8rem;
     text-transform: uppercase;
@@ -13,7 +13,7 @@ export const sizes = {
       padding: 0.3rem 0.6rem;
     }
   `,
-  medium: css`
+	medium: css`
     font-size: 1.4rem;
     padding: 1.2rem 1.6rem;
     font-weight: 500;
@@ -28,7 +28,7 @@ export const sizes = {
       padding: 0.8rem 1.2rem;
     }
   `,
-  large: css`
+	large: css`
     font-size: 1.6rem;
     padding: 1.2rem 2.4rem;
     font-weight: 500;
@@ -46,7 +46,7 @@ export const sizes = {
 };
 
 export const variations = {
-  primary: css`
+	primary: css`
     color: var(--color-brand-50);
     background-color: var(--color-brand-600);
 
@@ -54,7 +54,7 @@ export const variations = {
       background-color: var(--color-brand-700);
     }
   `,
-  secondary: css`
+	secondary: css`
     color: var(--color-grey-600);
     background: var(--color-grey-0);
     border: 1px solid var(--color-grey-200);
@@ -63,7 +63,7 @@ export const variations = {
       background-color: var(--color-grey-50);
     }
   `,
-  danger: css`
+	danger: css`
     color: var(--color-red-100);
     background-color: var(--color-red-700);
 

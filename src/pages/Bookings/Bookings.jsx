@@ -4,15 +4,15 @@ import { Heading } from "../../ui/Heading";
 import { Row } from "../../ui/Row";
 
 const Bookings = () => {
-  return (
-    <>
-      <Row type="horizontal">
-        <Heading as="h1">All bookings</Heading>
-        <BookingTableOperations />
-      </Row>
+	return (
+		<>
+			<Row type="horizontal">
+				<Heading as="h1">All bookings</Heading>
+				<BookingTableOperations />
+			</Row>
 
-      <BookingTable />
-    </>
-  );
+			<BookingTable />
+		</>
+	);
 };
 export default Bookings;

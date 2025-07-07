@@ -4,8 +4,8 @@ export const StyledRow = styled.div`
   display: flex;
 
   ${(props) =>
-    props.type === "horizontal" &&
-    css`
+		props.type === "horizontal" &&
+		css`
       justify-content: space-between;
       align-items: center;
 
@@ -17,8 +17,8 @@ export const StyledRow = styled.div`
     `}
 
   ${(props) =>
-    props.type === "vertical" &&
-    css`
+		props.type === "vertical" &&
+		css`
       flex-direction: column;
       gap: 1.6rem;
 

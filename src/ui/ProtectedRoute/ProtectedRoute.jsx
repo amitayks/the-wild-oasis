@@ -6,19 +6,19 @@ import { Spinner } from "../Spinner";
 import { FullPage } from "./ProtectedRoute.styled";
 
 export const ProtectedRoute = ({ children }) => {
-  const navigate = useNavigate();
-  const { isLoading, isAuthenticated } = useUser();
+	const navigate = useNavigate();
+	const { isLoading, isAuthenticated } = useUser();
 
-  useEffect(() => {
-    if (!isAuthenticated && !isLoading) navigate("/login");
-  }, [isAuthenticated, isLoading, navigate]);
+	useEffect(() => {
+		if (!isAuthenticated && !isLoading) navigate("/login");
+	}, [isAuthenticated, isLoading, navigate]);
 
-  if (isLoading)
-    return (
-      <FullPage>
-        <Spinner />
-      </FullPage>
-    );
+	if (isLoading)
+		return (
+			<FullPage>
+				<Spinner />
+			</FullPage>
+		);
 
-  if (isAuthenticated) return children;
+	if (isAuthenticated) return children;
 };

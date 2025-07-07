@@ -7,21 +7,21 @@ import { DarkModeTuggle } from "../DarkModeTuggle";
 import { StyledHeaderMenu } from "./HeaderMenu.styled";
 
 export const HeaderMenu = () => {
-  const navigate = useNavigate();
+	const navigate = useNavigate();
 
-  return (
-    <StyledHeaderMenu>
-      <li>
-        <ButtonIcon onClick={() => navigate("/account")}>
-          <MdOutlineAccountCircle />
-        </ButtonIcon>
-      </li>
-      <li>
-        <DarkModeTuggle />
-      </li>
-      <li>
-        <Logout />
-      </li>
-    </StyledHeaderMenu>
-  );
+	return (
+		<StyledHeaderMenu>
+			<li>
+				<ButtonIcon onClick={() => navigate("/account")}>
+					<MdOutlineAccountCircle />
+				</ButtonIcon>
+			</li>
+			<li>
+				<DarkModeTuggle />
+			</li>
+			<li>
+				<Logout />
+			</li>
+		</StyledHeaderMenu>
+	);
 };

@@ -15,8 +15,8 @@ export const FilterButton = styled.button`
   border: none;
 
   ${(props) =>
-    props.active &&
-    css`
+		props.active &&
+		css`
       background-color: var(--color-brand-600);
       color: var(--color-brand-50);
     `}

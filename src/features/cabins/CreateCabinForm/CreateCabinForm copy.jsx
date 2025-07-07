@@ -34,8 +34,6 @@ export const CreateCabinForm = ({ EditFileInfo, onCloseModal }) => {
 	});
 	const { errors } = formState;
 
-	const test = { foo: "bar" };
-
 	function onSubmit(data) {
 		const image = typeof data.image === "string" ? data.image : data.image[0];
 

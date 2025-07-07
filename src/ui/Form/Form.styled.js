@@ -2,8 +2,8 @@ import styled, { css } from "styled-components";
 
 export const StyledForm = styled.form`
   ${(props) =>
-    props.type === "regular" &&
-    css`
+		props.type === "regular" &&
+		css`
       padding: 2.4rem 4rem;
 
       /* Box */
@@ -21,8 +21,8 @@ export const StyledForm = styled.form`
     `}
 
   ${(props) =>
-    props.type === "modal" &&
-    css`
+		props.type === "modal" &&
+		css`
       width: 80rem;
 
       @media (max-width: 992px) {

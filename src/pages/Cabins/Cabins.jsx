@@ -5,19 +5,19 @@ import { Heading } from "../../ui/Heading";
 import { Row } from "../../ui/Row";
 
 const Cabins = () => {
-  return (
-    <>
-      <Row type="horizontal">
-        <Heading as="h1">All cabins</Heading>
-        <CabinTableOperation />
-      </Row>
+	return (
+		<>
+			<Row type="horizontal">
+				<Heading as="h1">All cabins</Heading>
+				<CabinTableOperation />
+			</Row>
 
-      <Row>
-        <CabinTable />
+			<Row>
+				<CabinTable />
 
-        <AddCabin />
-      </Row>
-    </>
-  );
+				<AddCabin />
+			</Row>
+		</>
+	);
 };
 export default Cabins;

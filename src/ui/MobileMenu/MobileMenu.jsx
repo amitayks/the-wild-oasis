@@ -3,10 +3,10 @@ import { MainNav } from "../MainNav";
 import { StyledMobileMenu } from "./MobileMenu.styled";
 
 export const MobileMenu = ({ onCloseModal }) => {
-  return (
-    <StyledMobileMenu>
-      <Logo />
-      <MainNav onCloseModal={onCloseModal} />
-    </StyledMobileMenu>
-  );
+	return (
+		<StyledMobileMenu>
+			<Logo />
+			<MainNav onCloseModal={onCloseModal} />
+		</StyledMobileMenu>
+	);
 };

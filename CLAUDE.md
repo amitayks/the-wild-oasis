@@ -6,10 +6,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - `npm run dev` - Start development server with Vite
 - `npm run build` - Build the project for production
-- `npm run lint` - Run Biome linter and formatter checks
-- `npm run lint:fix` - Run Biome linter and formatter with auto-fix
-- `npm run format` - Check code formatting with Biome
-- `npm run format:fix` - Format code with Biome
+- `npm run lint` - Run Biome linter checks
+- `npm run lint:fix` - Run Biome linter with auto-fix
+- `npm run format` - Check code formatting with Prettier
+- `npm run format:fix` - Format code with Prettier
+- `npm run format:prettier` - Format all files with Prettier
 - `npm run preview` - Preview the production build locally
 
 ## Project Architecture

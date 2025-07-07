@@ -9,26 +9,26 @@ import { useRecentStays } from "../useRecentStays";
 import { StyledDashboardLayout } from "./DashboardLayout.styled";
 
 export const DashboardLayout = () => {
-  const { bookings, isLoading } = useRecentBooking();
-  const { isLoading: isLoadingStays, confirmStays, numDays } = useRecentStays();
+	const { bookings, isLoading } = useRecentBooking();
+	const { isLoading: isLoadingStays, confirmStays, numDays } = useRecentStays();
 
-  const { cabins, isLoading: loadingCabins } = useCabin();
+	const { cabins, isLoading: loadingCabins } = useCabin();
 
-  if (isLoading || isLoadingStays || loadingCabins) {
-    return <Spinner />;
-  }
+	if (isLoading || isLoadingStays || loadingCabins) {
+		return <Spinner />;
+	}
 
-  return (
-    <StyledDashboardLayout>
-      <Stats
-        bookings={bookings}
-        confirmStays={confirmStays}
-        numDays={numDays}
-        cabins={cabins}
-      />
-      <TodayActivity />
-      <DurationChart confirmStays={confirmStays} />
-      <SalesChart bookings={bookings} numDays={numDays} />
-    </StyledDashboardLayout>
-  );
+	return (
+		<StyledDashboardLayout>
+			<Stats
+				bookings={bookings}
+				confirmStays={confirmStays}
+				numDays={numDays}
+				cabins={cabins}
+			/>
+			<TodayActivity />
+			<DurationChart confirmStays={confirmStays} />
+			<SalesChart bookings={bookings} numDays={numDays} />
+		</StyledDashboardLayout>
+	);
 };

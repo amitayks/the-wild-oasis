@@ -4,15 +4,15 @@ import { Sidebar } from "../Sidebar";
 import { Container, Main, StyledAppLayout } from "./styles";
 
 export const AppLayout = () => {
-  return (
-    <StyledAppLayout>
-      <Header />
-      <Sidebar />
-      <Main>
-        <Container>
-          <Outlet />
-        </Container>
-      </Main>
-    </StyledAppLayout>
-  );
+	return (
+		<StyledAppLayout>
+			<Header />
+			<Sidebar />
+			<Main>
+				<Container>
+					<Outlet />
+				</Container>
+			</Main>
+		</StyledAppLayout>
+	);
 };
