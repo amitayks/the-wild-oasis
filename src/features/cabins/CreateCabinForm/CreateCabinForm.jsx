@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { useEffect } from "react";
 import { Button } from "../../../ui/Button";
 import { FileInput } from "../../../ui/FileInput";
 import { Form } from "../../../ui/Form";
@@ -17,33 +18,37 @@ export const CreateCabinForm = ({ EditFileInfo, onCloseModal }) => {
 	const { id: editId, ...editValues } = EditFileInfo || {};
 	const isEditSession = Boolean(editId);
 
-	console.log("CreateCabinForm", editValues);
 
-	const { register, handleSubmit, reset, getValues, formState } = useForm({
-		defaultValues: isEditSession
+	const {
+		register,
+		handleSubmit,
+		reset,
+		getValues,
+		formState: { errors },
+	} = useForm({
+		defaultValues: isEditSession && EditFileInfo
 			? editValues
-			: {
-					name: "sdvSV",
-					maxCapacity: 1,
-					regularPrice: 1,
-					discount: 0,
-					description: "",
-					image: "",
-				},
-		mode: "onBlur",
+			: {},
 	});
-	const { errors } = formState;
+	useEffect(() => {
+		if (isEditSession && EditFileInfo) {
+			reset(editValues);
+		}
+	}, [EditFileInfo, isEditSession, reset]);
 
-	const test = { foo: "bar" };
+	if (isEditSession && !EditFileInfo) {
+		return <div>Loading...</div>; // Or your loading component
+	}
 
 	function onSubmit(data) {
-		const image = typeof data.image === "string" ? data.image : data.image[0];
+		const image =
+			typeof data?.image === "string" ? data?.image : data?.image[0];
 
 		if (isEditSession)
 			editCabin(
 				{ newCabinData: { ...data, image }, id: editId },
 				{
-					onSuccess: (_data) => {
+					onSuccess: () => {
 						reset();
 						onCloseModal?.();
 					},
@@ -53,14 +58,13 @@ export const CreateCabinForm = ({ EditFileInfo, onCloseModal }) => {
 			createCabin(
 				{ ...data, image: image },
 				{
-					onSuccess: (_data) => {
+					onSuccess: () => {
 						reset();
 						onCloseModal?.();
 					},
 				},
 			);
 	}
-
 	function onError(_errors) {
 		console.log(errors);
 	}
@@ -84,7 +88,7 @@ export const CreateCabinForm = ({ EditFileInfo, onCloseModal }) => {
 			</FormRow>
 
 			<FormRow label="Maximum capacity" error={errors?.maxCapacity?.message}>
-				<span>Maximum capacity</span>
+				<span>max Capacity</span>
 				<Input
 					type="number"
 					id="maxCapacity"
@@ -100,7 +104,7 @@ export const CreateCabinForm = ({ EditFileInfo, onCloseModal }) => {
 			</FormRow>
 
 			<FormRow label="Regular price" error={errors?.regularPrice?.message}>
-				<span>Regular price</span>
+				<span>Price Per Night</span>
 				<Input
 					type="number"
 					id="regularPrice"
@@ -116,8 +120,7 @@ export const CreateCabinForm = ({ EditFileInfo, onCloseModal }) => {
 			</FormRow>
 
 			<FormRow label="Discount" error={errors?.discount?.message}>
-				<span>Discount</span>
-
+				<span>Discount Price</span>
 				<Input
 					type="number"
 					id="discount"
@@ -135,7 +138,7 @@ export const CreateCabinForm = ({ EditFileInfo, onCloseModal }) => {
 				label="Description for website"
 				error={errors?.description?.message}
 			>
-				<span>Description for website</span>
+				<span>Cabin Description</span>
 				<Textarea
 					type="number"
 					id="description"
@@ -147,7 +150,7 @@ export const CreateCabinForm = ({ EditFileInfo, onCloseModal }) => {
 			</FormRow>
 
 			<FormRow label="Cabin photo">
-				<span>Cabin photo</span>
+				<span>Cabin Image</span>
 				<FileInput
 					id="image"
 					accept="image/*"
@@ -159,7 +162,11 @@ export const CreateCabinForm = ({ EditFileInfo, onCloseModal }) => {
 
 			<FormRow>
 				{/* type is an HTML attribute! */}
-				<Button type="reset" onClick={() => onCloseModal?.()}>
+				<Button
+					variation="secondary"
+					type="reset"
+					onClick={() => onCloseModal?.()}
+				>
 					Cancel
 				</Button>
 				<Button disabled={isWorking}>

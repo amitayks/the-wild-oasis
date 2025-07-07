@@ -10,7 +10,8 @@ export async function getCabins() {
 	return data;
 }
 
-export async function addEditCabin(cabinInfo, id) {
+export async function addEditCabin({ id, ...cabinInfo }) {
+	// const id = cabinInfo.id || null;
 	const hasImagePath = cabinInfo.image?.startsWith?.(supabaseUrl);
 
 	const imageName =
@@ -59,15 +60,13 @@ export async function addEditCabin(cabinInfo, id) {
 }
 
 export async function deleteCabin(id) {
-	const { data, error } = await supabase
-		.from("cabins")
-		.delete()
-		.eq("id", id)
-		.select();
+	const { data, error } = await supabase.from("cabins").delete().eq("id", id);
 
 	if (error) {
-		console.error("coud't delete cabin");
-		throw new Error("Cabin coud't be deleted");
+		if (error.code === "23503") {
+			throw new Error("Cannot delete cabin with existing bookings. Please cancel or move all bookings first.");
+		}
+		throw new Error(error.message || "Cabin couldn't be deleted");
 	}
 
 	return data;
